@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .callname {
+        width: 500px;
+    }
+</style>
+
+<body>
+    <div id="box">
+        <h2>随机点名程序</h2>
+        <div class="callname"></div>
+        <input type="submit" id="btn" value="点击选名">
+    </div>
+</body>
+<script src="./js.js"></script>
+<script>
+    (function () {
+        var callname = document.getElementsByClassName('callname');
+        var btn = document.getElementById('btn');
+        var arr = ['路人甲1', '路人甲1', '路人甲1', '路人甲1', '路人甲1', '路人甲1',
+            '路人甲1', '路人甲1', '路人甲1', '路人甲1', '路人甲1', '路人甲1',
+            '路人甲1', '路人甲1', '路人甲1', '路人甲1', '路人甲1', '路人甲1',
+            '路人甲1', '路人甲1', '路人甲1', '路人甲1', '路人甲1', '路人甲1',
+            '路人甲1', '路人甲1', '路人甲1', '路人甲1', '路人甲1', '路人甲1',
+            '路人甲1', '路人甲1'
+        ]
+
+        rallname(callname[0], arr);
+        var spp = document.getElementsByTagName('span');
+        btn.onclick = function () {
+
+            var i = clickstar(arr.length);
+            console.log(i);
+            for (var j = 0; j < spp.length; j++) {
+                spp[j].style.background = '';
+            }
+            spp[i].style.background = 'red';
+        }
+    })();
+</script>
+
+</html>

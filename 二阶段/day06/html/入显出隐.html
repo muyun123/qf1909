@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="submit" id="btn" value="滑过">
+    <div id="box"></div>
+</body>
+<script>
+    (
+        function () {
+            var btn = document.getElementById('btn');
+            var box = document.getElementById('box');
+
+            function mouseshow(n) {
+                if (n.style.display == 'block') {
+                    n.style.display = 'none';
+                } else {
+                    n.style.display = 'block';
+                }
+            }
+            btn.onmouseover = function () {
+                mouseshow(box);
+            }
+            btn.onmouseleave = function () {
+                mouseshow(box);
+            }
+        }
+    )();
+</script>
+
+</html>

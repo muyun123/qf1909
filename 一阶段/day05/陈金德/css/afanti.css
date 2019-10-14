@@ -1,0 +1,233 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+li{list-style: none;}
+
+#afanti{
+    width: 100%;
+    /* height: 2555px; */
+}
+
+#afanti .conter{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    /* background: red; */
+}
+
+/* header开始 */
+#afanti .header{
+    width: 100%;
+    height: 80px;
+    /* background: red; */
+}
+#afanti .header .conter{
+    background: url(../images/logo.png) no-repeat;
+    padding-left: 202px;
+    box-sizing: border-box;
+}
+#afanti .header .conter ul{
+    height: 80px;
+    width: 492px;
+    float: left;
+}
+#afanti .header .conter li{
+    height: 100%;
+    width: 82px;
+    float: left;
+  /* margin-top: 27px; */
+}
+#afanti .header .conter li a{
+    display: block;
+    width: 100%;
+    /* line-height: 80px; */
+    text-align: center;
+    line-height: 28px;
+    color: black;
+    margin-top:26px;
+}
+#afanti .header .conter  a:hover{
+    border-bottom: 2px solid #ff6700;
+    color: #ff6700;
+}
+#afanti .header .conter span{
+    float: right;
+    line-height: 80px;
+    /* font-size: 12px;
+    padding: 0 5px; */
+}
+#afanti .header .conter span a{
+    /* float: right; */
+    line-height: 80px;
+    font-size: 12px;
+    padding: 0 10px;
+    color: black;
+}
+/* header结束 */
+
+/* 轮播图开始 */
+#afanti .banner{
+    width: 100%;
+    height: 670px;
+    margin: 0 auto;
+    background: url(../images/banner.png) no-repeat center center;
+}
+
+
+/* 轮播图结束 */
+
+/* main1开始 */
+#afanti .main1{
+    width: 100%;
+    height: 715px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+#afanti .conter h2{
+    line-height: 34px;
+    font-size: 34px;
+    margin-top: 73px;
+}
+#afanti  .conter p{
+    line-height: 24px;
+    font-size: 24px;
+    margin-top: 46px;
+    color: #8A96B4;
+}
+#afanti .conter .fan{
+    width: 320px;
+    height: 460px;
+    /* background: url(../images/images/list_03.png) no-repeat center 0; */
+    margin-top: 78px;
+    padding-top: 265px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    float: left;
+}
+#afanti .main1 .conter .fan1{
+    background: url(../images/images/list_03.png) no-repeat center 0;
+}
+#afanti .main1 .conter .fan2{
+    background: url(../images/images/list_05.png) no-repeat center 0;
+}
+#afanti .main1 .conter .fan3{
+    background: url(../images/images/list_07.png) no-repeat center 0;
+}
+#afanti .conter .fan h2{
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+#afanti .conter .fan p{
+    width: 220px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #949799;
+  margin: 0 auto;
+}
+
+/* main1结束 */
+
+/* main2开始 */
+#afanti .main2{
+    width: 100%;
+    height: 862px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+#afanti .main2 .fan{
+    padding-top: 229px;
+}
+#afanti .main2 .fan h2{
+    margin-bottom: 52px;
+}
+#afanti .main2 .fan p{
+    
+    width: 100%;
+    display: block;
+    text-align: right;
+    margin: 0;
+    margin-top: 30px;
+}
+#afanti .main2 .fan a{
+    font-size: 18px;
+    display: inline-block;
+    text-align: right;
+    color: #ccc;
+}
+#afanti .main2 .fan a:hover{
+    color: #ff6700;
+    
+}
+/* #afanti .main2{
+    background: bisque;
+} */
+#afanti .main2 .conter .fan1{
+    background: url(../images/images/list_13.png) no-repeat center 0;
+}
+#afanti .main2 .conter .fan2{
+    background: url(../images/images/list_15.png) no-repeat center 0;
+}
+#afanti .main2 .conter .fan3{
+    background: url(../images/images/list_17.png) no-repeat center 0;
+}
+/* #afanti .main2 .conter .fan ul{
+    color: #ff6700;
+} */
+#afanti .main2 .conter .fan li{
+    background: url(../images/1.png) no-repeat 0 center;
+    width: 320px;
+    overflow: hidden;
+    padding-left: 15px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 46px;
+    
+}
+
+
+/* main3结束 */
+
+/* footer开始 */
+#afanti .footer{
+    width: 100%;
+    height: 228px;
+    margin: 0 auto;
+    background:#303030;
+}
+#afanti .footer .conter{
+    background:url(../images/images/list_23.jpg) no-repeat 868px center,url(../images/images/list_25.png) no-repeat 0 center;
+
+}
+#afanti .footer .conter p{
+    padding-top: 61px;
+    padding-left:288px; 
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 38px;
+    white-space: pre-line;
+}
+#afanti .footer .conter .p1{
+    color: #fff;
+}
+#afanti .footer .conter .p2{
+    background: url(../images/images/list_30.png) no-repeat 0 center;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+/* footer结束 */
+
+
+
+
+
+
+
+
+
+
+
+

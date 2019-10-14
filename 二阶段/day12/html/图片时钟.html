@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body style="font-size: 26px;">
+    <div id="box">
+        <!-- <img src="../images/img/0.png" alt="">2
+        <img src="../images/img/1.png" alt="">0
+        <img src="../images/img/2.png" alt="">1
+        <img src="../images/img/3.png" alt="">9
+        <img src="../images/img/4.png" alt="">-
+        <img src="../images/img/5.png" alt="">0
+        <img src="../images/img/6.png" alt="">8
+        <img src="../images/img/7.png" alt="">-
+        <img src="../images/img/8.png" alt="">78
+        <img src="../images/img/9.png" alt="">
+        <img src="../images/img/0.png" alt=""> -->
+    </div>
+</body>
+<script>
+    (function () {
+        var box = document.getElementById('box');
+
+
+        function addzero(num) {
+            if (num < 10) {
+                return '' + '0' + num;
+            } else {
+                return '' + num;
+            }
+        }
+        show();
+
+        function show() {
+            var time1 = new Date();
+            var year = time1.getFullYear();
+            var month = time1.getMonth() + 1;
+            var day = time1.getDate();
+            var hour = time1.getHours();
+            var minter = time1.getMinutes();
+            var miao = time1.getSeconds();
+            console.log(time1, year, month, day, hour, minter, miao);
+            var str = addzero(year) + addzero(month) + addzero(day) + addzero(hour) + addzero(minter) + addzero(
+                miao);
+            console.log(str);
+            var html = '';
+            for (var i in str) {
+                html += `
+                     <img src="../images/img/${str[i]}.png" alt="">
+                `;
+                if (i == 3 || i == 5) {
+                    html += '-';
+                } else if (i == 9 || i == 11) {
+                    html += ':';
+                } else if (i == 7) {
+                    html += '&nbsp;'
+                }
+            }
+            box.innerHTML = html;
+        }
+
+        setInterval(show, 1000);
+    })();
+</script>
+
+</html>

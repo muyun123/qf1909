@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .layer1 {
+        background: pink;
+    }
+
+    .layer2 {
+        background: yellow;
+    }
+
+    .layer3 {
+        background: #ccc;
+    }
+
+    #box {
+        width: 150px;
+        height: 150px;
+        /* background: rgb(14, 13, 13); */
+        position: fixed;
+        top: 150px;
+        left: 70px;
+    }
+
+    #box div {
+        background: rgb(209, 115, 115);
+        line-height: 30px;
+        margin-top: 10px;
+    }
+
+    #box .activ {
+        background: rgb(211, 31, 166);
+    }
+</style>
+
+<body>
+    <div class="layer layer1">1lou</div>
+    <div class="layer layer2">2lou</div>
+    <div class="layer layer3">3lou</div>
+    <div id="box">
+        <div class="activ">1lou</div>
+        <div class=" ">2lou</div>
+        <div class="">3lou</div>
+    </div>
+</body>
+<script>
+    (function () {
+        var layer = document.getElementsByClassName('layer');
+        var box = document.getElementById('box')
+        var btn = box.getElementsByTagName('div');
+        for (var i = 0; i < layer.length; i++) {
+            layer[i].style.height = window.innerHeight + 'px';
+        }
+        window.onscroll = function () {
+            var num = window.scrollY;
+            for (var i = 0; i < layer.length; i++) {
+                if (num >= layer[i].offsetTop) {
+                    for (var j = 0; j < btn.length; j++) {
+                        btn[j].className = '';
+                    }
+                    btn[i].className = 'activ';
+                }
+            }
+        }
+        for (var i = 0; i < btn.length; i++) {
+            btn[i].index = i;
+            btn[i].onclick = function () {
+                for (var j = 0; j < btn.length; j++) {
+                    btn[j].className = '';
+                }
+                this.className = 'activ';
+                window.scrollTo(0, window.innerHeight * this.index);
+            }
+        }
+    })();
+</script>
+
+</html>

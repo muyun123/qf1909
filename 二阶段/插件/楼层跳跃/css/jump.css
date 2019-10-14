@@ -1,0 +1,35 @@
+  * {
+      margin: 0;
+      padding: 0;
+  }
+
+  .layer1 {
+      background: pink;
+  }
+
+  .layer2 {
+      background: yellow;
+  }
+
+  .layer3 {
+      background: #ccc;
+  }
+
+  #box {
+      width: 150px;
+      height: 150px;
+      /* background: rgb(14, 13, 13); */
+      position: fixed;
+      top: 150px;
+      left: 70px;
+  }
+
+  #box div {
+      background: rgb(209, 115, 115);
+      line-height: 30px;
+      margin-top: 10px;
+  }
+
+  #box .activ {
+      background: rgb(211, 31, 166);
+  }

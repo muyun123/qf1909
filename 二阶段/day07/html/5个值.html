@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="submit" id="btn" value="随机20个元素的数组"><span></span><br>
+    最大值<span></span>索引<span></span><br>
+    最小值<span></span>索引<span></span><br>
+    平均值<span></span>
+</body>
+<script>
+    (
+        function () {
+            var sq = document.getElementsByTagName('span');
+            var btn = document.getElementById('btn');
+            var str = [];
+            var oldstr = [];
+            btn.onclick = function () {
+                for (i = 0; i < 20; i++) {
+                    str[i] = parseInt(Math.random() * 1000);
+                    oldstr[i] = str[i];
+                }
+
+
+                sq[0].innerHTML = '[' + str + ']';
+                sq[1].innerHTML = max(str);
+
+                sq[3].innerHTML = min(str);
+                ave(str);
+                console.log(oldstr);
+                sq[2].innerHTML = maxindex(oldstr, max(str));
+                sq[4].innerHTML = minindex(oldstr, min(str));
+            }
+
+            function max(a) {
+                a.sort(function (a, b) {
+                    return b - a;
+                })
+                // console.log(str);
+                var num = a[0];
+                return num;
+
+            }
+
+            function min(a) {
+                a.sort(function (a, b) {
+                    return a - b;
+                })
+                // console.log(str);
+                var num = a[0];
+                return num;
+
+            }
+
+            function ave(a) {
+                var num1 = 0;
+                for (var i = 0; i < 20; i++) {
+                    num1 += a[i] / 20;
+                }
+                sq[5].innerHTML = parseInt(num1);
+            }
+
+            function maxindex(a, b) {
+                for (var i = 0; i < 20; i++) {
+                    if (a[i] == b) {
+                        return i;
+                    }
+
+                }
+
+            }
+
+            function minindex(a, b) {
+                for (var i = 0; i < 20; i++) {
+                    if (a[i] == b) {
+                        return i;
+                    }
+                }
+            }
+        }
+    )();
+</script>
+
+</html>

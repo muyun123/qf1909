@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: pink;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="submit" id="btn">
+    <div id="box">
+
+    </div>
+</body>
+<script>
+    (
+        function () {
+            var btn = document.getElementById('btn');
+            var box = document.getElementById('box');
+
+            var istrue = true;
+
+            function boxx(num) {
+
+                if (istrue) {
+                    num.style.display = 'block';
+                } else {
+                    num.style.display = 'none';
+                }
+                istrue = !istrue;
+            }
+            btn.onclick = function () {
+                boxx(box);
+            }
+        }
+    )();
+</script>
+
+</html>

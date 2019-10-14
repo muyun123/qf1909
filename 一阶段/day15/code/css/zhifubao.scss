@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+ul,
+ol,
+dl {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#zhifubao {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .zhifu-header {
+        height: 4.266667rem;
+        background: #3F454F;
+        display: flex;
+        flex-direction: column;
+
+        .box1 {
+            flex: 1px;
+            // background: pink;
+            display: flex;
+            align-items: center;
+            color: #fff;
+
+            .box-left {
+                display: flex;
+                align-items: center;
+                flex: 3;
+                // background: green;
+                padding-left: .426667rem;
+                box-sizing: border-box;
+
+                i {
+                    font-size: .533333rem;
+                }
+
+                span {
+                    font-size: .32rem;
+                    line-height: .32rem;
+                }
+            }
+
+            .box-right {
+                height: 100%;
+
+                flex: 1;
+                // background: blueviolet;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                a {
+                    font-size: .533333rem;
+                    color: #fff;
+                }
+            }
+        }
+
+        .box2 {
+            flex: 3;
+            background: #3F454F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .list2 {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    i {
+                        font-size: .933333rem;
+                        color: #fff;
+                    }
+
+                    span {
+                        margin-top: .4rem;
+                        font-size: .4rem;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .zhifu-main {
+        flex: 1;
+    }
+
+    .zhifu-footer {
+        height: 1.333333rem;
+        width: 100%;
+        background: pink;
+
+        .box2 {
+            flex: 3;
+            background: #3F454F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .list2 {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    i {
+                        font-size: .586667rem;
+                        color: #fff;
+                    }
+
+                    span {
+                        font-size: .4rem;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

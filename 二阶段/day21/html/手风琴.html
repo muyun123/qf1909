@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #box {
+            margin: 50px;
+
+        }
+
+        #box h1 {
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: lightblue;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: lighter;
+            border: 1px solid #000;
+        }
+
+        #box .con {
+            width: 120px;
+            height: auto;
+        }
+
+        #box ul {
+            height: 0;
+            overflow: hidden;
+            transition: all .5s;
+        }
+
+        #box ul li {
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: lightcyan;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="box">
+        <div class="con">
+            <h1>体育</h1>
+            <ul>
+                <li>体育1</li>
+                <li>体育2</li>
+                <li>体育3</li>
+            </ul>
+        </div>
+        <div class="con">
+            <h1>新闻</h1>
+            <ul>
+                <li>新闻1</li>
+                <li>新闻2</li>
+                <li>新闻3</li>
+            </ul>
+        </div>
+        <div class="con">
+            <h1>娱乐</h1>
+            <ul>
+                <li>娱乐1</li>
+                <li>娱乐2</li>
+                <li>娱乐3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../js/common.js"></script>
+<script>
+    (function () {
+        var con = document.getElementsByClassName('con');
+        for (var i = 0; i < con.length; i++) {
+            con[i].isok = true;
+            con[i].children[0].onclick = function () {
+                if (this.parentNode.isok) {
+
+                    // startMove(this.parentNode.children[1], {
+                    //     height: 120
+                    // });
+                    openclos(this.parentNode.children[1], {
+                        height: 120
+                    });
+                    this.parentNode.isok = false;
+                } else {
+
+                    // startMove(this.parentNode.children[1], {
+                    //     height: 0
+                    // });
+                    this.parentNode.isok = true;
+                    openclos(this.parentNode.children[1], {
+                        height: 0
+                    });
+
+                }
+
+            }
+        }
+
+        // function openclos(ele, opt) {
+        //     clearInterval(ele.timer)
+        //     ele.timer = setInterval(function () {
+        //         var cur = 0;
+        //         cur = parseInt(css(ele, 'height'));
+        //         var speed = (opt.height - cur) / 4;
+        //         speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+        //         if (cur == opt.height) {
+        //             clearInterval(ele.timer);
+        //         }
+        //         ele.style.height = speed + cur + 'px';
+        //     }, 30);
+        // }
+
+        function openclos(ele, opt, fn) {
+            clearInterval(ele.timer);
+            ele.timer = setInterval(function () {
+                var istrue = false;
+                for (var key in opt) {
+                    var cur = 0;
+                    if (key == 'opacity') {
+                        cur = ele.style.opacity * 100;
+                    } else {
+                        cur = parseInt(css(ele, key));
+                    }
+
+                    var speed = (opt[key] - cur) / 4;
+                    speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                    if (cur == opt[key]) {
+
+                        istrue = true;
+                    } else {
+                        istrue = false;
+                    }
+                    if (key == 'opacity') {
+                        ele.style.opacity = (cur + speed) / 100;
+                        obj.style.filter = 'alpha(opacity:' + (cur + speed) + ')';
+                    } else {
+                        ele.style[key] = speed + cur + 'px';
+                    }
+                }
+                if (istrue) {
+                    clearInterval(ele.timer);
+                    if (fn) {
+                        fn();
+                    }
+                }
+            }, 30);
+        }
+    })();
+</script>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .msg-list {
+        position: relative;
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .msg-list ul {
+        padding: 10px;
+        min-height: 200px;
+        max-height: 400px;
+        /*超出部分出现滚动条*/
+        overflow-y: auto;
+        border: 1px solid #ddd;
+    }
+
+    .msg-list li {
+        float: left;
+        clear: both;
+        margin: 10px 0;
+        padding: 5px;
+        line-height: 2;
+        border-radius: 5px;
+        background-color: #efefef;
+    }
+
+    .msg-list li.active {
+        float: right;
+        background-color: #58bc58;
+        color: #fff;
+    }
+
+    .msg-list textarea {
+        display: block;
+        min-height: 50px;
+        margin: 10px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .status {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 5px 10px;
+        text-align: center;
+        color: #999;
+    }
+</style>
+</head>
+
+<body>
+    <h1>自动应答机器人</h1>
+    <div id="autoAnswer" class="msg-list">
+        <ul>
+            <!-- <li>内容</li>
+            <li class="active">我方</li>
+            <li>内容</li>
+            <li class="active">我方</li>
+            <li>内容</li>
+            <li class="active">我方</li>
+            <li>内容</li>
+            <li class="active">我方</li>
+            <li>内容</li>
+            <li class="active">我方</li>
+            <li>内容</li>
+            <li class="active">我方</li>
+            <li>内容</li>
+            <li class="active">我方</li> -->
+            <!-- <li>机器人</li>
+            <li class="active">我方</li> -->
+            <!-- <li>回复内容</li>-->
+        </ul>
+        <textarea></textarea>
+        <input type="button" value="提交">
+        <div class="status">对方正在输入...</div>
+    </div>
+</body>
+<script>
+  (function(){
+    var autoAnswer=document.getElementById('autoAnswer');
+    var list=autoAnswer.children[0];
+    var textarea=document.querySelector('textarea');
+    var btn=document.querySelector('input');
+    var status=document.getElementsByClassName('status')[0];
+    var arr=['你好','你是'];
+    var arr1=['你好','喵喵'];
+    function show(){
+        var text1=textarea.value.trim();
+        if(text1){
+          var myli=document.createElement('li');
+          myli.className='active';
+          myli.innerHTML=text1;
+          list.appendChild(myli);
+          textarea.value='';
+          status.style.display='block';
+          list.scrollTop=list.scrollHeight-list.offsetHeight-2;
+        }else {
+          alert('请输入');
+        }
+        setTimeout(function(){
+          status.style.display='none';
+          robot(text1);
+          textarea.focus();
+        },shijian(arr,arr1,text1));
+      }
+      function shijian(arr,arr1,text){
+        if(arr.indexOf(text)>=0){
+          var index=arr.indexOf(text);
+          return arr1[index].length*1000;
+        }else{
+          return 1000;
+        }
+      }
+      function robot(text){
+        if(arr.indexOf(text)>=0){
+          var index=arr.indexOf(text);
+          var myli=document.createElement('li');
+          myli.innerHTML=arr1[index];
+          list.appendChild(myli);
+        }else{
+          var index='嗯嗯';
+          var myli=document.createElement('li');
+          myli.innerHTML=index;
+          list.appendChild(myli);
+        }
+      }
+      btn.onclick=function(){
+        show();
+      }
+      textarea.onkeyup=function(ev){
+        if(ev.keyCode==13){
+          show();
+        }
+      }
+
+  })();
+</script>
+</html>

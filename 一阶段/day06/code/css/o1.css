@@ -1,0 +1,82 @@
+.d1 ul{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height:  40px;
+}
+.d1 li{
+        float: left;
+}
+.d1 li a{
+    display: block;
+    height:35px;
+    width: 72px;
+    text-align: center;
+    margin-top: 4px;
+    border:1px solid red;
+    line-height: 40px;
+}
+.d1 li a:hover{
+    height:40px;
+    margin-top:0;
+    border-bottom:1px solid #ccc;   
+}
+
+
+
+
+.d2 ul{
+    width: 500px;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    /* margin: 100px auto; */
+}
+.d2 ul li{
+    float: left;
+     width: 40px;
+    height: 50px;
+    line-height: 40px;
+    border:1px solid red;
+}
+.d2 ul li .a1{
+  display: block;
+     /* width: 40px;
+    height: 20px;
+    line-height: 40px;
+    border:1px solid red; */
+}
+.d2 ul li .a2{
+   
+    display: none;
+}
+.d2 ul li:hover .a1{
+    display: none;
+}
+.d2 ul li:hover .a2{  
+    display:block;
+}
+
+#d3{
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+    font-size: 0; 
+    text-align: center;
+}
+#d3 .imge{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: pink;
+    vertical-align: middle;
+   
+}
+#d3 span{
+    display:inline-block;  
+    width: 0;
+    height: 100%;
+    font-size: 14px;
+    background: rgb(4, 235, 39);
+     vertical-align: middle;
+}
+
+

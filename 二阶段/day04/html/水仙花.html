@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    span {
+        display: inline-block;
+        width: 40px;
+        line-height: 20px;
+        font-size: 14px;
+        text-align: center;
+        background: pink;
+        margin: 10px;
+    }
+</style>
+
+<body>
+    水仙花数有
+</body>
+<script>
+    for (i = 100; i < 1000; i++) {
+        var num2 = Math.pow(parseInt(i / 100), 3) + Math.pow(parseInt(i % 100 / 10), 3) + Math.pow(parseInt(
+            i % 10), 3);
+        if (i == num2) {
+            document.write('<span>' + i + '</span>');
+        }
+    }
+</script>
+
+</html>

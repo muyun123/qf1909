@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num">
+    <input type="submit" id="btn" value="结果">
+    <span id="res"></span>
+</body>
+<script>
+    (
+        function () {
+            var num = document.getElementById('num');
+            var btn = document.getElementById('btn');
+            var res = document.getElementById('res');
+            var num2 = 1;
+
+            function result() {
+                var num1 = num.value;
+                if (num1) {
+                    res.innerHTML = jiecheng(num1);
+                }
+            }
+
+            function jiecheng(a) {
+
+                if (a <= 1) {
+                    return 1;
+                }
+                return a * jiecheng(a - 1);
+            }
+            // console.log(jiecheng(3));
+            btn.onclick = function () {
+                result();
+            }
+        }
+    )();
+</script>
+
+</html>

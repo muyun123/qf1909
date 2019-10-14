@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>09距离某个日期还有多少天</h1>
+    <input type="date" id="num">
+    <input type="button" value="点我" id="btn">
+    <div id="output"></div>
+</body>
+<script>
+    (function () {
+        var num = document.getElementById('num');
+        var btn = document.getElementById('btn');
+        var output = document.getElementById('output');
+        btn.onclick = function () {
+            var num1 = num.value;
+            var nowtime = Date.now();
+            var endtime = Date.parse(num1);
+            var tdoa = endtime - nowtime;
+
+            // console.log();
+            var obj = mschange(tdoa);
+            output.innerHTML = `剩余${Math.ceil(obj.day)}天`;
+
+        }
+
+        function mschange(num) {
+            var num1 = parseInt(num / 1000);
+            var miao = num1 % 60;
+            var minute = (num1 / 60) % 60;
+            var hour = (num1 / 60 / 60) % 24;
+            var day = num1 / 60 / 60 / 24;
+            return {
+                'miao': miao,
+                'minute': minute,
+                'hour': hour,
+                'day': day
+            }
+        }
+    })();
+</script>
+
+</html>

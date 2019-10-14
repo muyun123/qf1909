@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num">
+    <input type="submit" id="btn" value="每次输入一个数字到数组">
+    <input type="submit" id="clear" value="清空数组">
+    <p>
+        <span class="sq"></span><br>
+        增加20%得到
+        <br><span class="sq"></span>
+    </p>
+</body>
+<script>
+    (
+        function () {
+            var num = document.getElementById('num');
+            var btn = document.getElementById('btn');
+            var clear = document.getElementById('clear');
+            var sq = document.getElementsByClassName('sq');
+
+            var str = [];
+            btn.onclick = function () {
+                var num1 = num.value;
+                if (num1) {
+                    str.push(num1);
+                    sq[0].innerHTML = '[' + str + ']';
+                    sq[1].innerHTML = '[' + changover(str) + ']';
+                } else {
+                    alert('请输入数字');
+                }
+
+
+            }
+            clear.onclick = function () {
+                str.splice(0, str.length);
+                sq[0].innerHTML = str;
+                sq[1].innerHTML = changover(str);
+            }
+
+            function changover(a) {
+                var str1 = [];
+                for (i = 0; i < a.length; i++) {
+                    str1.push(a[i] - 0 + a[i] * 0.2);
+                }
+                return str1;
+            }
+        }
+    )();
+</script>
+
+</html>

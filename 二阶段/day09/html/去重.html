@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+</body>
+<script>
+    (function () {
+        var box = document.getElementById('box');
+        var arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7];
+        norepeat(arr);
+
+        function norepeat(arr) {
+            var arr1 = [];
+            arr1 = arr.filter(function (item, index) {
+                if (arr1.indexOf(arr[index]) == -1) {
+                    return arr1.push(item);
+                }
+
+            })
+            console.log(arr1);
+        }
+
+    })();
+</script>
+
+</html>

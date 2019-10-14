@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="strnum" value="aabbccfghmmc">
+    <input type="submit" id="btn">
+</body>
+<script>
+    (function () {
+        var arr1 = [];
+        var strnum = document.getElementById('strnum');
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            var str = strnum.value;
+
+            // for (var i in strobj(str)) { //去重
+            //     arr1.push(i);
+            // }
+
+            // console.log(arr1);
+            console.log(quchong(str));
+            console.log(strobj(str));
+        }
+        // 字符转对象， 差字符数
+        function strobj(str) {
+            var obj = {};
+            for (var i in str) {
+                if (!obj[str[i]]) {
+                    obj[str[i]] = 1;
+                } else if (obj[str[i]]) {
+                    obj[str[i]] += 1;
+                }
+            };
+            return obj;
+        }
+
+
+        //去重
+        function quchong(str) {
+            var str1 = '';
+            for (var i in str) {
+                if (str1.indexOf(str[i]) < 0) {
+                    str1 += str[i];
+                }
+            }
+            return str1;
+        }
+    })();
+</script>
+
+</html>

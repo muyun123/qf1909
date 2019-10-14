@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>判奇偶</title>
+</head>
+
+<body>
+    <input type="text" id="num" placeholder="输入大于0的数字">
+    <input type="button" id="tijiao" value="提交">
+    <span id="res"></span>
+</body>
+<script>
+    var num = document.getElementById('num');
+    var tijiao = document.getElementById('tijiao');
+    var res = document.getElementById('res');
+
+
+
+    tijiao.onclick = function () {
+        var num1 = num.value;
+        var num2 = num1 % 2;
+        if (num1 > 0) {
+            if (num2) {
+                res.innerHTML = '奇数';
+            } else {
+                res.innerHTML = '偶数';
+            }
+        } else {
+            res.innerHTML = '不能为空或输入大于0的数';
+        }
+
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="box">
+
+    </div>
+</body>
+<script>
+    var box = document.getElementById('box');
+    (function () {
+        var arr = [
+            [],
+            [],
+            [],
+            [],
+            []
+        ];
+        var arr1 = [
+            [],
+            [],
+            [],
+            [],
+            []
+        ];
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
+                arr[i][j] = j + 1 + i * 5;
+            }
+        }
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j <= i; j++) {
+                arr1[i][j] = j + 1 + i * 5;
+            }
+        }
+
+        function shuzu(a, b) {
+            var html = '<p>5x5二维数组</p><table>'
+            html += a.map(function (item) {
+                return `<tr>
+                          <td>${item[0]}</td>
+                          <td>${item[1]}</td>
+                          <td>${item[2]}</td>
+                          <td>${item[3]}</td>
+                          <td>${item[4]}</td>
+                          </tr>
+                          
+                        `;
+            }).join('');
+            html += '</table>';
+            html += '<p>5x5二维数组的左下角</p><table>';
+            var zhi = 0;
+            for (var i = 0; i < 5; i++) {
+                html += '<tr>'
+                html += b[i].map(function (item) {
+                    zhi += item;
+                    return `<td>${item}</td> `;
+                }).join('');
+                html += '</tr>'
+            }
+            html += '</table><p>左下半三角的和' + zhi + '</p>';
+            console.log(zhi);
+            return html;
+        }
+
+        box.innerHTML = shuzu(arr, arr1);
+    })();
+</script>
+
+</html>

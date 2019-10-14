@@ -1,0 +1,56 @@
+*{margin: 0;padding: 0}
+a{text-decoration: none;}
+li{list-style: none;}
+
+#wudi{
+    width: 100%;
+    height: 3437px;
+    background: red;
+ 
+}
+#wudi .conten{
+    width: 1100px;
+    height: 100%;
+    background: rgb(0, 255, 34);
+    margin: 0 auto;
+}
+
+/* header开始 */
+#wudi .header{
+    width: 100%;
+    height: 70px;
+    background: #fff;
+}
+#wudi .header .conten{
+    width: 1100px;
+    height: 100%;    
+    margin: 0 auto;
+    background:url(../images/2.png) no-repeat ;
+}
+#wudi .header .conten ul{
+    width: 510px;
+    height: 70px;
+    float: right;
+    text-align: center;
+    /* background: greenyellow; */
+}
+#wudi .header .conten ul li{
+    height: 100%;
+    float: left;
+    font-size: 14px;
+    line-height: 70px;
+    padding: 0 28px;
+}
+#wudi .header .conten ul li a{
+    color: #000;
+}
+#wudi .header .conten ul li a:hover{
+    color: rgb(0, 132, 255);
+}
+
+
+
+
+
+
+

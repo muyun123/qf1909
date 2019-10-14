@@ -1,0 +1,746 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+dl {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: "";
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: 1140px;
+    height: 100%;
+    // background: PINK;
+    margin: auto;
+}
+
+#taobao_detail {
+    width: 100%;
+
+    .header {
+        height: 35px;
+        background: #f5f5f5;
+    }
+
+    .nav_sear {
+        height: 210px;
+        margin: 10px 0;
+        background: #ccc;
+    }
+
+    .header_detail {
+        // height: 549px;
+        // background: pink;
+
+        .content {
+            border: 1px solid #ccc;
+
+            div {
+                box-sizing: border-box;
+            }
+
+            .content_left {
+                float: left;
+                font-size: 0;
+                width: 420px;
+                height: 100%;
+                padding: 20px 0 20px 20px;
+
+                // background: red;
+                .bigimg {
+                    width: 400px;
+                    height: 400px;
+                    text-align: center;
+
+                    img {
+                        height: 400px;
+                    }
+                }
+
+                .smalling {
+                    margin-top: 15px;
+                    float: left;
+                    width: 100%;
+
+                    li {
+                        width: 50px;
+                        height: 50px;
+                        float: left;
+                        text-align: center;
+                        background: #fff;
+                        margin-right: 9px;
+                        border: 2px solid #fff;
+                        box-sizing: border-box;
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+
+                    .activ {
+                        border: 2px solid #FF4400;
+                    }
+
+                }
+
+                .collect {
+                    font-size: 14px;
+                    margin-top: 20px;
+                    float: left;
+
+                    a {
+                        color: #ccc;
+                    }
+                }
+            }
+
+            .content_middle {
+                float: left;
+                height: 100%;
+                width: 518px;
+                padding: 20px 20px 20px 18px;
+                background: #fff;
+
+                .shop_select {
+                    h2 {
+                        font-size: 16px;
+                    }
+
+                    .brand_little {
+                        margin-top: 18px;
+                        font-size: 12px;
+                        color: #000;
+                    }
+
+                    .shop_price {
+                        background: #FFF2E8;
+                        padding: 10px;
+                    }
+
+                    .oldshop_price {
+                        width: 480px;
+                        box-sizing: border-box;
+
+                        margin-top: 3px;
+
+
+                        .prince_left {
+                            width: 332px;
+                            float: left;
+
+                            span:first-child {
+                                display: inline-block;
+                                width: 60px;
+                                font-size: 12px;
+                                color: #000;
+                                vertical-align: middle;
+                            }
+
+                            span:nth-child(2) {
+                                font-size: 14px;
+                                // color: #FF4400;
+                                // font-weight: bold;
+                                vertical-align: middle;
+                                text-decoration: line-through;
+                            }
+                        }
+
+                        .prince_right {
+                            font-size: 12px;
+                            float: left;
+
+                            a {
+                                width: 48px;
+                                // height: 42px;
+                                display: inline-block;
+                                text-align: center;
+                                color: #000;
+                                padding: 0 9px;
+
+                                span {
+                                    // line-height: 12px;
+                                    display: block;
+                                }
+
+                                span:first-child {
+                                    font-size: 16px;
+                                    line-height: 18px;
+                                }
+                            }
+
+                            .tradesucc {
+                                border-left: 1px solid pink;
+                                padding-left: 9px;
+                                width: 48px;
+                                // height: 42px;
+                                display: inline-block;
+                                text-align: center;
+                                color: #000;
+                                box-sizing: content-box;
+
+                                span {
+                                    display: block;
+                                }
+
+                                span:first-child {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+
+                    .newshop_price {
+                        float: left;
+
+                        .prince_tit2 {
+                            vertical-align: top;
+                            font-size: 12px;
+                            width: 60px;
+                            display: inline-block;
+                        }
+
+                        strong {
+                            vertical-align: top;
+                            font-size: 26px;
+                            color: #FF4400;
+                            line-height: 26px;
+
+                            em {
+                                font-style: normal;
+                            }
+
+                            span {
+                                display: inline-block;
+                                font-size: 26px;
+                            }
+                        }
+                    }
+
+                    .discounts {
+                        padding: 10px;
+                        background: #FFF9F5;
+
+                        span {
+                            font-size: 12px;
+                            line-height: 12px;
+                            display: inline-block;
+                            width: 60px;
+                        }
+
+                        i {
+                            font-style: normal;
+                            display: inline-block;
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        em {
+                            font-style: normal;
+                            display: inline-block;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .shop_addr {
+                        padding: 8px;
+
+                        .litt_tit {
+                            font-size: 12px;
+                            display: inline-block;
+                            width: 60px;
+                            padding-left: 2px;
+                        }
+
+                        .send_addr {
+                            display: inline-block;
+                            font-size: 12px;
+                            position: relative;
+
+                            .lastmy_addr {
+                                line-height: 12px;
+                                cursor: pointer;
+                                border: 1px solid #fff;
+                                padding: 2px;
+                                padding-right: 14px;
+                            }
+
+                            .lastmy_addr:hover {
+                                border: 1px solid #FF4400;
+                                color: #FF4400;
+                                background: rgb(228, 228, 228);
+                            }
+
+                            i {
+                                position: absolute;
+                                left: 154px;
+                                top: 3px;
+                                display: inline-block;
+                                width: 8px;
+                                height: 10px;
+                                // background: url(../images1/xiangxia.png) center no-repeat;
+                            }
+                        }
+
+                        .express_money {
+                            display: inline-block;
+                            font-size: 12px;
+                            padding: 2px;
+                            border: 1px solid #fff;
+                            cursor: pointer;
+
+                            i {
+                                margin-left: 2px;
+                                display: inline-block;
+                                width: 8px;
+                                height: 10px;
+                                // background: url(../images1/xiangxia.png) center no-repeat;
+                            }
+                        }
+
+                        .express_money:hover {
+                            border: 1px solid #FF4400;
+                            color: #FF4400;
+                            background: rgb(228, 227, 227);
+                        }
+
+                        .sendtime {
+                            display: inline-block;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .hr_line {
+                        margin: 0 0 10px 0;
+                        height: 1px;
+                        border-bottom: 1px dashed #ccc;
+                        position: relative;
+
+                        span {
+                            font-size: 12px;
+                            cursor: pointer;
+                            position: absolute;
+                            top: -8px;
+                            left: 424px;
+                            background: #fff;
+                        }
+
+                    }
+
+                    .shop_buy {
+                        padding-left: 10px;
+                        box-sizing: border-box;
+
+                        dl {
+                            margin-bottom: 10px;
+                        }
+
+                        .shop_size {
+                            width: 100%;
+                            height: 38px;
+                            font-size: 12px;
+
+                            dt {
+                                float: left;
+                                width: 55px;
+                                margin-right: 5px;
+                            }
+
+                            dd {
+                                float: left;
+                                width: 24px;
+                                height: 28px;
+                                border: 1px solid #ccc;
+                                box-sizing: border-box;
+                                text-align: center;
+                                line-height: 28px;
+                                margin-right: 5px;
+                                position: relative;
+
+                                span {
+                                    display: none;
+                                    position: absolute;
+                                    top: 32px;
+                                    left: 0;
+                                    background: #fff;
+                                    border: 1px solid #ccc;
+                                    min-width: 70px;
+                                    white-space: nowrap;
+                                    z-index: 9;
+                                    padding: 0 8px;
+                                }
+                            }
+
+                            dd:hover {
+                                border: 2px solid #FF4400;
+                                cursor: pointer;
+                                line-height: 26px;
+                            }
+
+                            dd:hover span {
+                                display: block;
+                            }
+
+                            .activ {
+                                border: 2px solid #FF4400;
+                                line-height: 26px;
+                            }
+                        }
+
+                        .shop_color {
+                            width: 100%;
+                            height: 38px;
+                            font-size: 12px;
+
+                            dt {
+                                float: left;
+                                width: 55px;
+                                margin-right: 5px;
+                            }
+
+                            dd {
+                                float: left;
+                                min-width: 36px;
+                                height: 36px;
+                                border: 1px solid #ccc;
+                                box-sizing: border-box;
+                                text-align: center;
+                                margin-right: 5px;
+
+                                // background: url(../images1/O1CN01jfkLVz2Hdk3znRnjn_0-item_pic.jpg);
+                                // 
+                                // background-position: center 0;
+                                a {
+                                    display: block;
+                                    min-width: 30px;
+                                    height: 30px;
+                                    margin: 2px;
+                                    position: relative;
+
+                                    img {
+
+                                        max-width: 30px;
+                                    }
+
+
+                                    span {
+                                        display: none;
+                                        background: #fff;
+                                        // display: block;
+                                        color: #000;
+                                        min-width: 50px;
+                                        line-height: 30px;
+                                        white-space: nowrap;
+                                        padding: 0 8px;
+                                    }
+
+                                    img:hover+span {
+                                        position: absolute;
+                                        top: 40px;
+                                        left: -2px;
+                                        display: block;
+                                        border: 1px solid #ccc;
+
+                                    }
+
+                                }
+                            }
+
+                            dd:hover {
+                                border: 2px solid #FF4400;
+
+                                a {
+                                    margin: 1px;
+                                }
+                            }
+
+                            .activ {
+                                border: 2px solid #FF4400;
+
+                                a {
+                                    margin: 1px;
+                                }
+                            }
+                        }
+
+                        .shop_number {
+                            width: 100%;
+                            height: 38px;
+                            font-size: 12px;
+                            margin-bottom: 0;
+
+                            dt {
+                                float: left;
+                                width: 55px;
+                                margin-right: 5px;
+                            }
+
+                            dd {
+                                float: left;
+                                height: 28px;
+                                // border: 1px solid #ccc;
+                                box-sizing: border-box;
+                                text-align: center;
+                                line-height: 28px;
+                                margin-right: 5px;
+                                font-size: 0;
+
+                                input {
+                                    text-align: center;
+                                    width: 50px;
+                                    height: 28px;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    font-size: 12px;
+                                    vertical-align: middle;
+                                    border-left: 0;
+                                    border-right: 0;
+                                }
+
+                                span {
+                                    display: inline-block;
+                                    min-width: 27px;
+                                    max-width: 200px;
+                                    height: 28px;
+                                    border: 1px solid #ccc;
+                                    box-sizing: border-box;
+                                    font-size: 12px;
+                                    vertical-align: middle;
+                                    line-height: 28px;
+                                    cursor: pointer;
+                                    background: #EDEDED;
+                                }
+
+                                p {
+                                    display: inline-block;
+                                    margin-left: 4px;
+
+                                    span {
+                                        border: 0;
+                                        background: #fff;
+
+                                        em {
+                                            font-style: normal;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .jinggao {
+                            height: 24px;
+                            width: 100%;
+                            margin-bottom: 10px;
+                            display: none;
+
+                            span {
+                                display: inline-block;
+                                width: 203px;
+                                height: 24px;
+                                line-height: 24px;
+                                border: 1px solid #FF4400;
+                                background: #FFF2F2;
+                                font-size: 12px;
+                                text-align: center;
+                                margin-left: 60px;
+                                background: rgb(196, 231, 252);
+                            }
+                        }
+
+                        .click_buy {
+                            text-align: center;
+                            padding-top: 10px;
+
+                            .nowbuy {
+                                float: left;
+                                margin-right: 10px;
+
+                                a {
+                                    display: block;
+                                    width: 136px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    color: #ff6700;
+                                    background: #FFE4D0;
+                                    border: 1px solid rgb(252, 205, 170);
+                                }
+
+                                a:hover {
+                                    background: rgb(243, 204, 175);
+                                }
+
+                            }
+
+                            .shopcar {
+                                float: left;
+
+                                a {
+                                    display: block;
+                                    width: 182px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    color: #fff;
+                                    background: #FF4400;
+                                    border: 1px solid rgb(252, 205, 170);
+                                }
+
+                                a:hover {
+                                    background: rgb(231, 63, 2);
+                                }
+                            }
+
+                        }
+
+                        .shop_sole {
+                            font-size: 12px;
+
+                            dl {
+                                margin: 20px 0;
+                            }
+
+                            dd,
+                            dt {
+                                float: left;
+                            }
+
+                            dt {
+                                width: 60px;
+                            }
+
+                            dd {
+                                margin-right: 15px;
+                                cursor: pointer;
+
+                                img {
+                                    vertical-align: middle;
+                                    margin-right: 6px;
+                                }
+
+                                span {
+                                    vertical-align: middle;
+                                }
+
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .content_right {
+                float: left;
+                height: 100%;
+                width: 200px;
+                background: yellow;
+            }
+
+
+        }
+
+
+    }
+
+    .shop_detail {
+        margin-top: 20px;
+        width: 100%;
+
+        margin-bottom: 20px;
+
+        .tapbar {
+            width: 100%;
+            height: 45px;
+            background: #F6F6F6;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+
+            .option_top {
+
+
+                dl {
+                    width: 190px;
+                    height: 46px;
+                    font-size: 0;
+                    padding: 9px 0 0 9px;
+                    box-sizing: border-box;
+                    float: left;
+
+
+                    input[type="text"] {
+                        width: 135px;
+                        height: 26px;
+                        vertical-align: middle;
+                        box-sizing: border-box;
+                        border: 1px solid #ccc;
+                        border-right: 0;
+                    }
+
+                    input[type="button"] {
+                        width: 30px;
+                        height: 26px;
+                        vertical-align: middle;
+                        box-sizing: border-box;
+                        border: 0;
+                        background: #FF4400;
+                    }
+                }
+
+                dd {
+                    float: left;
+                    width: 131px;
+                    height: 46px;
+                    line-height: 46px;
+                    text-align: center;
+                    border-left: 1px solid #ccc;
+                    box-sizing: border-box;
+                }
+
+                dd:last-child {
+                    border-right: 1px solid #ccc;
+                }
+
+                .activ1 {
+                    position: relative;
+                    top: -1px;
+                    height: 47px;
+                    background: #fff;
+                    border-bottom: 1px solid #fff;
+                    border-top: 2px solid #FF4400;
+                }
+            }
+        }
+
+        .content_main {
+            .main2 {
+                display: none;
+                height: 2000px;
+            }
+
+            .main3 {
+                display: none;
+
+                height: 2000px;
+
+            }
+        }
+    }
+}

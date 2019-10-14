@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    身高<input type="text" id="num1">m <br>
+    体重<input type="text" id="num2">kg <br>
+    <input type="button" id="tijiao" value="提交">
+    <span id="res"></span>
+</body>
+<script>
+    var num1 = document.getElementById('num1');
+    var num2 = document.getElementById('num2');
+    var tijiao = document.getElementById('tijiao');
+    var res = document.getElementById('res');
+    tijiao.onclick = function () {
+        var num4 = num1.value - 0;
+        var num5 = num2.value - 0;
+        var num3 = num5 / (num4 * num4);
+        // alert(num3);
+        if ((num3 > 0) && (num3 < 18.5)) {
+            res.innerHTML = '过轻';
+        } else if ((num3 > 18.5) && (num3 < 24.99)) {
+            res.innerHTML = '正常';
+        } else if ((num3 > 25) && (num3 < 28)) {
+            res.innerHTML = '过重';
+        } else if ((num3 > 28) && (num3 < 32)) {
+            res.innerHTML = '肥胖';
+        } else if (num3 > 32) {
+            res.innerHTML = '非常肥胖';
+        } else {
+            res.innerHTML = '请输入正确的数值';
+        }
+    }
+</script>
+
+</html>

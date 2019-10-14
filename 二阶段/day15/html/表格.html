@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<style>
+  #output {
+    margin-top: 20px;
+  }
+
+  table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td {
+    border: 1px solid #ddd;
+    padding: 3px 5px;
+  }
+</style>
+</head>
+
+<body>
+  <h1>生成任意表格</h1>
+  <label for="row">姓名：</label><input type="text" id="row">
+  <label for="col">性别：</label><input type="text" id="col">
+  <input type="button" value="生成表格" id="btn">
+  <div id="output">
+    <table>
+      <!-- <tr>
+        <td contenteditable="true">121</td>
+        <td>
+          <a href="###">删除</a>
+        </td>
+      </tr> -->
+    </table>
+  </div>
+</body>
+<script>
+  (function () {
+    var row1 = document.getElementById('row');
+    var col1 = document.getElementById('col');
+    var btn = document.getElementById('btn');
+    var output = document.getElementById('output');
+    var num = 0;
+
+    function dong(tag1, tag2, value, boolen) {//参1要插入的子元素，参2被插的元素，参3子元素的内容，参4是否动态修改
+      var td2 = document.createElement(tag1);
+      if (boolen) {
+        td2.contentEditable = 'true';
+      }
+      td2.innerHTML = value;
+      tag2.appendChild(td2);
+    }
+    btn.onclick = function () {
+      num++;
+      var num1 = row1.value.trim();
+      var num2 = col1.value.trim();
+      if (num1 && num2) {
+        var tr = document.createElement('tr');
+        dong('td', tr, num);
+        dong('td', tr, num1, 'true');
+        dong('td', tr, num2, 'true');
+        var num3 = `<a href="###">删除</a>&nbsp;&nbsp;<a href="###">复制</a>`;
+        dong('td', tr, num3);
+        output.firstElementChild.appendChild(tr);
+      } else {
+        alert('请输入');
+      }
+      row1.value = '';
+      col1.value = '';
+      row1.focus();
+      col1.focus();
+      var trr = document.querySelectorAll('#output table tr td a');
+      var trcolor = document.querySelectorAll('#output table tr');
+      delcoby(trr,trcolor);
+    }
+  function delcoby(a,b){
+    //变色
+    for (var i = 0; i < b.length; i++) {
+      if (i % 2 == 0) {
+      b[i].style.background = 'red';
+      } else {
+        b[i].style.background = '#58bc58';
+      }
+    }
+    for (var i = 0; i < a.length; i++) {
+      //删除
+      if (i % 2 == 0) {
+        a[i].onclick = function () {
+          var tr1 = this.parentNode.parentNode;
+          output.firstElementChild.removeChild(tr1);
+          var trcolor = document.querySelectorAll('#output table tr');
+          if(b!=trcolor){
+          var trr = document.querySelectorAll('#output table tr td a');
+          delcoby(trr,trcolor);
+        }
+        }
+      } else{//复制
+        a[i].onclick = function () {
+          var tr1 = this.parentNode.parentNode.cloneNode(true);
+          output.firstElementChild.appendChild(tr1);
+          var trr = document.querySelectorAll('#output table tr td a');
+          if(a!=trr){
+            var trcolor = document.querySelectorAll('#output table tr');
+            delcoby(trr,trcolor);
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+  })();
+</script>
+
+</html>

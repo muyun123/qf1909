@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            background: url(../imags/img/triangles.png);
+            background-size: cover;
+            position: relative;
+        }
+
+        .box1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        ul {
+            width: 900px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul li {
+            width: 100px;
+            height: 320px;
+            overflow: hidden;
+            transition: width 2.4s;
+            position: relative;
+        }
+
+        ul li img {
+            position: absolute;
+            left: -270px;
+            /* transform: translate(-50px, 0); */
+            transition: left 2s;
+        }
+
+        li:hover {
+
+            width: 640px;
+            /* overflow: visible; */
+        }
+
+        li:hover img {
+
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            <ul>
+                <li><img src="../imags/img/img1.jpg" alt=""></li>
+                <li><img src="../imags/img/img2.jpg" alt=""></li>
+                <li><img src="../imags/img/img3.jpg" alt=""></li>
+                <li><img src="../imags/img/img4.jpg" alt=""></li>
+                <li><img src="../imags/img/img5.jpg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

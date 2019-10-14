@@ -1,0 +1,61 @@
+ * {
+     margin: 0;
+     padding: 0;
+
+ }
+
+ body,
+ html {
+     width: 100%;
+     height: 100%;
+ }
+
+ #box,
+ ul {
+     width: 100%;
+     height: 100%;
+ }
+
+ li {
+     list-style: none;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.3);
+ }
+
+ .opac {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+     width: 300px;
+     height: 300px;
+
+     background: #fff;
+
+ }
+
+ .opac .advtop span:first-child {
+     font-size: 14px;
+ }
+
+ .opac .advtop span:first-child i {
+     font-style: normal;
+ }
+
+ .opac .advtop span:last-child {
+     float: right;
+     display: inline-block;
+     width: 16px;
+     border: 1px solid #000;
+     text-align: center;
+     line-height: 16px;
+     cursor: pointer;
+     margin: 5px;
+ }
+
+ .opac .advtop span:last-child:hover {
+     background: red;
+ }

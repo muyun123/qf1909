@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num1" placeholder="输入1~12的数">月
+    <input type="submit" id="tijiao">
+    <span id="tian"></span>
+</body>
+<script>
+    var num1 = document.getElementById('num1');
+    var tijiao = document.getElementById('tijiao');
+    var tian = document.getElementById('tian');
+    tijiao.onclick = function () {
+        var num2 = num1.value - 0;
+        if ((num2 <= 0) || (num2 > 12)) {
+            tian.innerHTML = '输入1~12的数';
+        } else {
+            switch (num2) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    tian.innerHTML = 31 + '天';
+                    break;
+                case 2:
+                    tian.innerHTML = 28 + '天';
+                    break;
+
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    tian.innerHTML = 30 + '天';
+                    break;
+            }
+        }
+    }
+</script>
+
+</html>

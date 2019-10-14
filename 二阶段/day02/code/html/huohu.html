@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/huohu.css">
+    <link rel="stylesheet" href="../css/1.css" id="skin">
+</head>
+
+<body>
+    <div id="huohu">
+        <div id="top-nav">
+            <span id="huanfu">换肤</span>
+        </div>
+        <div id="hide">
+            <ul class="list1">
+                <li>
+                    <div class="dd-img">
+
+                    </div>
+                    <div class="dd-sp">
+                        <input type="radio" checked id="li1"><span>默认</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="dd-img">
+
+                    </div>
+                    <div class="dd-sp">
+                        <input type="radio" id="li2"><span>圣诞红</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="dd-img">
+
+                    </div>
+                    <div class="dd-sp">
+                        <input type="radio" id="li3"><span>少女粉</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="dd-img">
+
+                    </div>
+                    <div class="dd-sp">
+                        <input type="radio" id="li4"><span>原谅绿</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="dd-img">
+
+                    </div>
+                    <div class="dd-sp">
+                        <input type="radio" id="li5"><span>香蕉黄</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="nav-footer">
+                <span id="ssqq1">确认</span>
+                <span id="ssqq2">取消</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var huanfu = document.getElementById('huanfu');
+    var hide = document.getElementById('hide');
+    var li1 = document.getElementById('li1');
+    var li2 = document.getElementById('li2');
+    var li3 = document.getElementById('li3');
+    var li4 = document.getElementById('li4');
+    var li5 = document.getElementById('li5');
+    var skin = document.getElementById('skin');
+    var queren = document.getElementById('ssqq1');
+    var quxiao = document.getElementById('ssqq2');
+
+    var oldres = [];
+    var istrue = true;
+    huanfu.onclick = function () {
+
+        if (istrue) {
+
+            hide.style.height = '200px';
+        } else {
+            hide.style.height = '0';
+            oldres[1] = li1.checked;
+            oldres[2] = li2.checked;
+            oldres[3] = li3.checked;
+            oldres[4] = li4.checked;
+            oldres[5] = li5.checked;
+        }
+        istrue = !istrue;
+        li1.onclick = function () {
+            this.checked = true;
+            li2.checked = false;
+            li3.checked = false;
+            li4.checked = false;
+            li5.checked = false;
+            skin.href = '../css/1.css';
+        }
+        li2.onclick = function () {
+            this.checked = true;
+            li1.checked = false;
+            li3.checked = false;
+            li4.checked = false;
+            li5.checked = false;
+            skin.href = "../css/2.css";
+        }
+        li3.onclick = function () {
+            this.checked = true;
+            li1.checked = false;
+            li2.checked = false;
+            li4.checked = false;
+            li5.checked = false;
+            skin.href = '../css/3.css';
+        }
+        li4.onclick = function () {
+            this.checked = true;
+            li1.checked = false;
+            li2.checked = false;
+            li3.checked = false;
+            li5.checked = false;
+            skin.href = '../css/4.css';
+        }
+        li5.onclick = function () {
+            this.checked = true;
+            li1.checked = false;
+            li2.checked = false;
+            li3.checked = false;
+            li4.checked = false;
+            skin.href = '../css/5.css';
+        }
+        queren.onclick = function () {
+            oldres[1] = li1.checked;
+            oldres[2] = li2.checked;
+            oldres[3] = li3.checked;
+            oldres[4] = li4.checked;
+            oldres[5] = li5.checked;
+            hide.style.height = '0';
+            istrue = !istrue;
+        }
+        quxiao.onclick = function () {
+            li1.checked = oldres[1];
+            li2.checked = oldres[2];
+            li3.checked = oldres[3];
+            li4.checked = oldres[4];
+            li5.checked = oldres[5];
+            if (li1.checked) {
+                skin.href = '../css/1.css';
+            } else if (li2.checked) {
+                skin.href = '../css/2.css';
+            } else if (li3.checked) {
+                skin.href = '../css/3.css';
+            } else if (li4.checked) {
+                skin.href = '../css/4.css';
+            } else if (li5.checked) {
+                skin.href = '../css/5.css';
+            }
+            hide.style.height = '0';
+            istrue = !istrue;
+
+        }
+    }
+</script>
+
+</html>

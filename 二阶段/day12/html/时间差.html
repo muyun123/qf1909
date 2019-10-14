@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="date" id="num">到
+    <input type="date" id="num1">
+    <input type="submit" value="时间差" id="btn">
+    <span id="res"></span>
+</body>
+<script>
+    (function () {
+        var num = document.getElementById('num');
+        var num1 = document.getElementById('num1');
+        var btn = document.getElementById('btn');
+        var res = document.getElementById('res');
+        btn.onclick = function () {
+            var num2 = num.value;//获取表单里的日期2019-12-08
+            var num3 = num1.value;
+            var startnum = Date.parse(num2);//将日期转化为毫秒
+            var endnum = Date.parse(num3);
+            var tdoa = (endnum - startnum) / 1000 / 60 / 60 / 24;//相减再转化为天数
+            res.innerHTML = num2 + '到' + num3 + '相差' + tdoa + '天';
+
+        }
+    })();
+</script>
+
+</html>

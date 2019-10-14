@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    arr数组0到99随机
+    <input type="text">
+    个数据里是否包含
+    <input type="text" value="60">
+    <span id=""></span>
+    的数据
+    <input type="submit" value="判断">
+    <input type="text">
+</body>
+<script>
+    (
+
+        function () {
+            var input = document.getElementsByTagName('input');
+
+            input[2].onclick = function () {
+                var num = input[0].value;
+                var num1 = input[1].value;
+                input[3].value = has(num, num1);
+            }
+
+            function has(a, b) {
+                var str = [];
+                for (i = 0; i < a; i++) {
+                    str.push(parseInt(Math.random() * 100));
+                }
+                console.log(str);
+                for (i = 0; i < a; i++) {
+                    if (str[i] == 60) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        })();
+</script>
+
+</html>

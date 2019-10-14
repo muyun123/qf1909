@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 0;
+            height: 10px;
+            background: #58bc58;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="plan"></div>
+</body>
+<script>
+    (function () {
+        var box = document.getElementById('box');
+        var plan = document.getElementById('plan');
+        var seep = 20;
+        function show() {
+            var widthr = box.offsetWidth + seep; //每次刷新改变宽度
+            if (widthr >= window.innerWidth) { //判断宽度是否到达可视区
+                widthr = window.innerWidth;
+                clearInterval(timer); //关闭定时器
+            }
+            var num = parseInt(widthr / window.innerWidth * 100) + '%'; //每次进度的百分比
+            plan.innerHTML = num;
+            plan.style = 'text-align:right;width:' + num + ';background:#fff;'
+            box.style.width = widthr + 'px';
+        }
+        var timer = setInterval(show, 100); //定时器
+    })();
+</script>
+
+</html>

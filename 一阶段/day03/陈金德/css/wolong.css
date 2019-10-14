@@ -1,0 +1,311 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+
+#wolong{
+    width: 999px;
+    height: 1499px;
+    /* background: #ccc; */
+    margin: 0 auto;
+    position: relative;
+}
+
+#wolong .header{
+    width: 999px;
+    height: 100px;
+    background: #fff;
+}
+#wolong .header .header-left{
+    width: 251px;
+    height: 23px;
+    background: url(../images/02.png);
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+#wolong .header .header-right input{
+    width: 230px;
+    height: 30px;
+    background: #F1F1F1;
+    float: right;
+    border: 0;
+    position: absolute;
+    top:40px;
+    right:27px;
+}
+
+#wolong .nav{
+    width: 999px;
+    height: 60px;
+    background: #000;
+}
+#wolong .nav .nav1{
+    width: 960px;
+    height: 60px;
+    margin: 0 auto;
+}
+#wolong .nav .nav1 li{
+    width: 119px;
+    height: 60px;
+    background: #000;
+    list-style: none;
+    float: left;
+    font-size: 20px;
+   
+    line-height: 60px;
+    text-align: center;
+    border-right:1px solid #ccc; 
+}
+#wolong .nav .nav1 li a{
+    color: #fff;
+    font-size: 13px;
+    display: block;
+    width: 119px;
+    height: 60px;
+}
+#wolong .nav .nav1 li a:hover{
+    background: #ccc;
+    color: #000;
+}
+
+#wolong .banner{
+    width: 999px;
+    height: 465px;
+    background:url(../images/01.png);
+}
+
+#wolong .main1{
+    width: 999px;
+    height:240px;
+    background: #fff;
+    position: relative;
+}
+#wolong .main1 div{
+    float: left;
+}
+#wolong .main1 a{
+    color: #000;
+}
+#wolong .main1 a:hover{
+    text-decoration: underline;
+}
+#wolong .main1 .main1-1{
+    width: 500px;
+    height: 240px;
+    /* background: #ff6700; */
+}
+#wolong .main1 h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+#wolong .main1 .main1-1 ul{
+    margin-left: 40px;
+
+}
+#wolong .main1 .main1-1 ul a{
+     color: #5D5D5D;
+     float: left;
+     display: block;
+    width:310px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+#wolong .main1 .main1-1 li{
+   color: #5D5D5D;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+#wolong .main1 .main1-1 li span{
+    float: right;
+    margin-right: 20px;
+}
+#wolong .main1 .main1-2{
+    width: 240px;
+    height: 240px;
+    background:#F1F1F1;
+}
+#wolong .main1 .main1-2 div{
+    font-size: 14px;
+    margin-left: 20px;
+}
+#wolong .main1 .main1-2 .main1-2d1{
+    margin-bottom: 20px;
+    line-height: 27px;
+}
+#wolong .main1 .main1-2 .main1-2d1 a{
+    color:#5d5d5d;
+}
+#wolong .main1 .main1-2 .main1-2d2{
+    
+    line-height: 27px;
+}
+#wolong .main1 .main1-2 .main1-2d2 a{
+    color:#5d5d5d;
+}
+
+
+#wolong .main1 .main1-3{
+    width: 259px;
+    height: 240px;
+    background: #FBFBFB;
+    position: relative;
+}
+#wolong .main1 .main1-3 .main1-3d1{
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 30px;
+    line-height: 27px;
+}
+#wolong .main1 .main1-3 .main1-3d1 a{
+    color:#5d5d5d;;
+}
+#wolong .main1 .main1-3 .main1-3d2{
+    background: #AFAFAF;
+    border-radius: 4px;
+    width: 66px;
+    height: 19px;
+    font-size: 12px;
+   
+    line-height: 19px;
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+#wolong .main1 .main1-3 .main1-3d2 a{
+     color: #fff;
+     display: block;
+     border-radius: 4px;
+     width: 66px;
+     height: 19px;
+}
+#wolong .main1 .main1-3 .main1-3d2 a:hover{
+    text-decoration: none;
+    background: #ff6700;
+}
+#wolong .main1 .main1-3 .main1-3img{
+    width: 80px;
+    height: 114px;
+    background: url(../images/03_03.png);
+    position: absolute;
+    right: 10px;
+    bottom: 1px;
+}
+
+#wolong .main2{
+    width: 999px;
+    height: 305px;
+    background: #fff;
+}
+#wolong .main2 .main2-d a{
+    color: #000;
+    display: block;
+}
+#wolong .main2 .main2-d a:hover{
+    text-decoration: underline;
+}
+
+#wolong .main2 h3{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#wolong .main2 h3 a{
+    color: #000;
+}
+#wolong .main2 h3 a:hover{
+    text-decoration: underline;
+}
+#wolong .main2 div{ 
+    width:  210px; 
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 19px;
+}
+#wolong .main2 div p{
+    font-size: 13px;
+    line-height: 27px;
+    margin-top: 20px;
+    color:#5d5d5d;
+}
+#wolong .main2 .mian2-d img{
+    width: 210px;
+    height: 136px;
+   
+}
+
+#wolong .main3{
+    width: 999px;
+    height: 250px;
+    background: #E5E5E5;
+}
+#wolong .main3 .main3-d1{
+    float: left;
+    margin-right: 40px;
+}
+#wolong .main3 .main3-d11{
+    font-size: 18px;
+    color: #5F5F5F;
+    padding-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+#wolong .main3 .main3-d12{
+    width: 453px;
+    border-top: 1px solid#5f5f5f;
+    color:#5f5f5f;
+    margin-left: 20px;
+}
+#wolong .main3 .main3-d12 ul{
+    margin-left: 10px;
+    margin-top: 20px;
+    list-style: none;
+    float: left;
+    width:141px;
+}
+#wolong .main3 .main3-d12 ul li{
+    line-height: 27px;
+    font-size: 12px;
+}
+#wolong .main3 .main3-d12 img{
+    width: 205px;
+    height: 157px;
+}
+
+#wolong .footer{
+    width: 999px;
+    height: 80px;
+    /* background: #000; */
+}
+#wolong .footer div{
+    width: 999px;
+  
+    margin-top: 20px;
+}
+#wolong .footer div span{
+    font-size: 12px;
+    color:#5f5f5f;
+}
+#wolong .footer div .footer-s1{
+    margin-left: 20px;
+}
+#wolong .footer div .footer-s1 span{
+  
+    margin: 0 10px;
+}
+#wolong .footer div .footer-s2{
+    float: right;
+}
+#wolong .footer div .footer-s2 i{
+    display: inline-block;
+    height: 17px;
+  
+}
+#wolong .footer span{
+    vertical-align: middle;
+}
+#wolong .footer div .footer-s2 i img{
+    width: 18px;
+    height: 14px;
+    vertical-align: middle;
+}

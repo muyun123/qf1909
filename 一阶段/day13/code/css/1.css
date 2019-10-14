@@ -1,0 +1,52 @@
+.box{
+    width: 1240px;
+    height: 600px;
+    display: flex;
+    background:red;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;s
+}
+.box header{
+    background: #666666;
+    /* height: 50px; */
+    flex: 1;
+}
+.box footer{
+    background: #666666;
+    /* height: 50px; */
+    flex: 1;
+}
+.box main{
+    background: #d1cdcd;
+    flex: 10;
+    display: flex;
+}
+.box main nav{
+    background: #532d2d;
+    flex: 1;
+}
+.box main section{
+    background: #d1cdcd;
+    flex: 5;
+}
+.box main aside{
+    background: #db5959;
+    flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

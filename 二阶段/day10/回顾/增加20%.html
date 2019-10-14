@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    编写一个map(arr)函数，把数组中的每一个数字都增加20%，并返回新的数组
+</body>
+<script>
+    (function () {
+        var arr = [10, 15, 2, 32, 5, 4, 20, 8, 48, 54, 6];
+        var arr1 = [];
+        map(arr);
+
+        function map(arr) {
+            arr.forEach(function (item) {
+                arr1.push(item + item * 0.2);
+            });
+            console.log(arr1);
+        }
+    })();
+</script>
+
+</html>

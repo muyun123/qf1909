@@ -1,0 +1,62 @@
+.wai{
+    width: 500px;
+    height: 60px;
+    background: #F5F5F5;
+    margin: auto;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 10px;
+    /* box-shadow: 0px 5px 0px 0px #C0C0C0;  */
+}
+.wai input[type=text]{
+    width: 350px;
+    height: 40px;
+    background: #fff;
+    margin-top: 7px;
+    margin-left: 10px;
+    border: 2px solid #ccc;
+}
+.wai input[type=submit]{
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    background: rgb(13, 169, 201);
+    margin-top: 7px;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 2px solid rgb(7, 132, 151);
+    box-shadow: 0px 2px 0px 0px #28b8b8 inset; 
+}
+.ww{
+    width: 501px;
+    height: 65px;
+    background: #d1d1d1;
+    margin: auto;
+    border-bottom: 1px solid rgb(187, 185, 185);
+    border-radius: 10px;
+    font-size: 0;
+    box-shadow: 1px 3px 3px 0px #a09d9d; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

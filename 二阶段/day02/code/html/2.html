@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num1" value="45678">秒
+    <input type="submit" id="btn" value="等于">
+    <input type="text" id="hour">时
+    <input type="text" id="mint">分
+    <input type="text" id="sss">秒
+</body>
+<script>
+    var num1 = document.getElementById('num1');
+    var hour = document.getElementById('hour');
+    var mint = document.getElementById('mint');
+    var sss = document.getElementById('sss');
+    var btn = document.getElementById('btn');
+    num11 = num1.value - 0;
+    hour.value = parseInt(num11 / 3600);
+    mint.value = parseInt((num11 % 3600) / 60);
+    sss.value = parseInt((num11 % 3600) % 60);
+    btn.onclick = function () {
+        num11 = num1.value - 0;
+        hour.value = parseInt(num11 / 3600);
+        mint.value = parseInt((num11 % 3600) / 60);
+        sss.value = parseInt((num11 % 3600) % 60);
+    }
+    console.log(parseInt(41 % 60))
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    (function () {
+        function firstchildr(ele) {
+            if (ele.firstElementChild) {
+                return ele.firstElementChild;
+            } else {
+                return ele.firstchildr;
+            }
+        }
+
+        function lastchildr(ele) {
+            if (ele.lastElementChild) {
+                return ele.lastElementChild;
+            } else {
+                return ele.lastchildr;
+            }
+        }
+
+        function nextSibling(ele) {
+            if (ele.nextElementSling) {
+                return ele.nextElementSling;
+            } else {
+                return ele.nextSibling;
+            }
+        }
+
+        function previousSibling(ele) {
+            if (ele.firstElementChild) {
+                return ele.previousElementSiblng;
+            } else {
+                return ele.previousSibling;
+            }
+        }
+    })();
+</script>
+
+</html>

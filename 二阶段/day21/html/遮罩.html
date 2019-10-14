@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片遮罩</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: #58bc58;
+            margin-right: 10px;
+            position: relative;
+
+        }
+
+        p {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="list">
+        <li>11111
+            <p></p>
+        </li>
+        <li>222
+            <p></p>
+        </li>
+        <li>3333
+            <p></p>
+        </li>
+    </ul>
+</body>
+<script src="../js/common.js"></script>
+<script>
+    (function () {
+        var list = document.getElementById('list');
+        var lii = list.getElementsByTagName('li');
+
+        for (var i = 0; i < lii.length; i++) {
+
+            lii[i].onmouseover = function () {
+                startMove(this.children[0], {
+                    opacity: 60
+                });
+                // asd(this.children[0]);
+            }
+            // function asd(a) {
+            //     var speed = 0;
+            //     var timer = setInterval(function () {
+            //         speed += 10;
+            //         if (speed >= 60) {
+            //             clearInterval(timer);
+            //             speed = 60;
+            //         }
+            //         a.style.opacity = speed / 100;
+            //     }, 100);
+            // }
+            lii[i].onmouseout = function () {
+                startMove(this.children[0], {
+                    opacity: 0
+                });
+            }
+        }
+    })();
+</script>
+
+</html>

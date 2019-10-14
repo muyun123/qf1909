@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#zhifubao {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#zhifubao .zhifu-header {
+  height: 4.266667rem;
+  background: #3F454F;
+  display: flex;
+  flex-direction: column;
+}
+
+#zhifubao .zhifu-header .box1 {
+  flex: 1px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+#zhifubao .zhifu-header .box1 .box-left {
+  display: flex;
+  align-items: center;
+  flex: 3;
+  padding-left: .426667rem;
+  box-sizing: border-box;
+}
+
+#zhifubao .zhifu-header .box1 .box-left i {
+  font-size: .533333rem;
+}
+
+#zhifubao .zhifu-header .box1 .box-left span {
+  font-size: .32rem;
+  line-height: .32rem;
+}
+
+#zhifubao .zhifu-header .box1 .box-right {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#zhifubao .zhifu-header .box1 .box-right a {
+  font-size: .533333rem;
+  color: #fff;
+}
+
+#zhifubao .zhifu-header .box2 {
+  flex: 3;
+  background: #3F454F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#zhifubao .zhifu-header .box2 .list2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#zhifubao .zhifu-header .box2 .list2 li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#zhifubao .zhifu-header .box2 .list2 li i {
+  font-size: .933333rem;
+  color: #fff;
+}
+
+#zhifubao .zhifu-header .box2 .list2 li span {
+  margin-top: .4rem;
+  font-size: .4rem;
+  color: #fff;
+}
+
+#zhifubao .zhifu-main {
+  flex: 1;
+}
+
+#zhifubao .zhifu-footer {
+  height: 1.333333rem;
+  width: 100%;
+  background: pink;
+}
+
+#zhifubao .zhifu-footer .box2 {
+  flex: 3;
+  background: #3F454F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#zhifubao .zhifu-footer .box2 .list2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#zhifubao .zhifu-footer .box2 .list2 li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#zhifubao .zhifu-footer .box2 .list2 li i {
+  font-size: .586667rem;
+  color: #fff;
+}
+
+#zhifubao .zhifu-footer .box2 .list2 li span {
+  font-size: .4rem;
+  color: #fff;
+}

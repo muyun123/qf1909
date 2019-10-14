@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    含有30个整型元素的数组，按顺序分别赋予从2开始的偶数
+    <br>
+    <span></span><br>
+    每五个数求出一个平均值
+    <br><span></span>
+</body>
+<script>
+    (
+        function () {
+            var span = document.getElementsByTagName('span');
+            var str = [];
+
+            var i = 2;
+            while (str.length < 30) {
+                if (i % 2 == 0) {
+                    str.push(i);
+                }
+                i++;
+            }
+
+
+            span[0].innerHTML = '[' + str + ']';
+            var num = 0;
+            var str1 = [];
+
+            for (var j = 0; j < str.length / 5; j++) {
+
+                for (var x = 0; x < 5; x++) {
+                    num += str[x + j * 5] / 5;
+                    console.log(num);
+                }
+                str1[j] = num.toFixed(0);
+            }
+
+            span[1].innerHTML = '[' + str1 + ']';
+        }
+    )();
+</script>
+
+</html>

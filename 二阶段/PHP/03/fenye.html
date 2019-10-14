@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,
+        ol,
+        dl {
+            list-style: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #box {
+            width: 600px;
+            padding: 10px;
+            margin: auto;
+            border: 1px #ccc solid;
+        }
+
+        .list li {
+            border-bottom: 1px solid #757577;
+            margin-top: 10px;
+            height: 25px;
+        }
+
+        .list a {
+            float: left;
+        }
+
+        .clear::after {
+            content: '';
+            width: 0;
+            display: block;
+            clear: both;
+            overflow: hidden;
+            text-overflow: hidden;
+        }
+
+        .list span {
+            float: right;
+        }
+
+        .list2 li {
+            margin-top: 20px;
+            float: left;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        .list2 li:hover span {
+            background: #ff6700;
+        }
+
+        .list2 li span {
+            display: block;
+            padding: 3px;
+            background: #ccc;
+            cursor: pointer;
+        }
+
+        .paixu {
+            background: #757577;
+            cursor: pointer;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <select class="paixu">
+            <option value="mo">默认</option>
+            <option value="asc">什序</option>
+            <option value="desc">降序</option>
+        </select>
+        <input type="text" autocomplete="off" id="sear">
+        <h2>分页</h2>
+        <ul class="list clear">
+            <li><a>标题</a><span>销量</span></li>
+        </ul>
+        <div class="fenye">
+            <ul class="list2 clear">
+                <!-- <li><a href="">首页</a></li>
+                <li><a href="">上一页</a></li> -->
+                <!-- <li><a href="###">1</a></li> -->
+                <!-- <li><a href="">下一页</a></li>
+                <li><a href="">尾页</a></li> -->
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../common.js"></script>
+<script>
+    (() => {
+        var list = document.getElementsByClassName('list')[0];
+        var list2 = document.getElementsByClassName('list2')[0];
+        var paixu = document.getElementsByClassName('paixu')[0];
+        var sear = document.getElementById('sear');
+        var num = 10; //每页显示条数
+        var ipage = 1; //当前页
+        var paixur = paixu.value;
+        var text = '';
+        init();
+
+        function init() {
+            ajax({
+                type: 'get',
+                url: './fenye.php',
+                data: {
+                    num,
+                    ipage,
+                    paixur,
+                    text,
+                },
+                succ(str) {
+                    creatdoc(str);
+                },
+            });
+            let creatdoc = str => {
+                var srr = JSON.parse(str);
+                var arr = srr.res;
+                var html = arr.map(item => {
+                    return `<li><a>${item.title}</a><span>${item.sales}</span></li>`;
+                }).join('');
+
+                var html1 = '';
+
+                for (var i = 0; i < Math.ceil(srr.sum / srr.num); i++) {
+                    html1 += `<li><span>${i+1}</span></li>`;
+                };
+                list.innerHTML = html;
+                list2.innerHTML = html1;
+
+                list2.onclick = ev => {
+                    if (ev.target.tagName.toLowerCase = 'a') {
+                        ipage = ev.target.innerHTML;
+                        init();
+                    }
+                }
+            }
+            paixu.onclick = (ev) => {
+
+                paixur = paixu.value;
+                console.log(paixur);
+                init();
+            }
+            sear.onblur = () => {
+                text = sear.value.trim()
+                init();
+            }
+        }
+    })();
+</script>
+
+</html>

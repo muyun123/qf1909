@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    (function () {
+        var obj = {
+            name: 'apple',
+            price: 7890
+        };
+        var url = 'http://www.baidu.com';
+        var url1 = url + '？' + objToStr(obj); //字符拼接
+        console.log(url1);
+
+        function objToStr(obj) {
+            var arr1 = [];
+            //对象转换数组
+            for (var i in obj) {
+                arr1.push(i + '=' + obj[i]);
+
+            }
+            //数组拼接成字符串
+            return arr1.map(function (item) {
+                return item;
+            }).join('&');
+        }
+    })();
+</script>
+
+</html>

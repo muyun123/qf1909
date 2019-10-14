@@ -1,0 +1,88 @@
+#kaiyuan{
+    .blog-header{
+        .header-nav{
+            position: relative;
+            .uli1{
+                 display: list-item;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%);
+                height: 55px;
+                 width: 164px;
+                 padding-left: 70px;
+                 box-sizing: border-box;
+                 padding-top: 18px;
+                .yincang{
+                    display: inline-block;     
+                    
+                    text-align: center;
+                   
+                    line-height: 55px;
+                     width: 10px;
+                            height: 13px;
+                            border: 1px solid #615f5e;
+                            font-size: 5px;
+                            line-height: 7px;
+                            text-align: center;  
+                            
+                }
+                
+                
+            }
+            .list1{
+                display: list-item;
+                position: absolute;
+                top: 55px;
+                left: 50%;
+                transform: translate(-50%);
+                li{      
+                      display: none;        
+                    background: #fff; 
+                    z-index: 999px;
+                    box-sizing: border-box;
+                    a{
+                        text-align: center;
+                        display: block;
+                         padding: 0 50px;
+                         white-space: nowrap;
+                    }
+                   
+                }
+               
+               
+            } 
+            li:hover li{
+                width: 164px;
+                    display: inline-block;
+                }
+        }
+    }
+    .blog-main{
+        .art-main{
+             flex-direction: column;
+             align-items: center;
+             .main-left{
+                 width: 98%;
+             }
+             .main-right{
+                 width: 60%;
+             }
+    }
+        
+    }
+    .blog-footer{
+        .box-top{
+            .list1{
+              display: flex;
+        flex-direction: column;   
+        align-items: center;
+        li{
+            width: 50%;
+        }
+            }
+           
+        }
+        
+    }
+}

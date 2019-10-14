@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 100px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <span></span><span></span><br>
+    <input type="submit" id="btn" value="随颜">
+</body>
+<script>
+    (function () {
+        var spp = document.getElementsByTagName('span');
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            spp[0].style.background = randomColor();
+            spp[1].innerHTML = randomColor();
+        }
+
+        function randomColor() {
+            var str = '0123456789abcdef';
+            var str1 = '#';
+            for (var i = 0; i < 6; i++) {
+                var ran = parseInt(Math.random() * 16);
+                str1 += str[ran];
+            }
+            return str1;
+        }
+
+    })();
+</script>
+
+</html>

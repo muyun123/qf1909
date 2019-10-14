@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+</style>
+
+<body>
+</body>
+<script>
+    //直角三角形
+    for (var i = 0; i < 5; i++) {
+        for (var j = 0; j < i; j++) {
+            document.write('*' + '&nbsp;');
+        }
+        document.write('<br>');
+    }
+    document.write('<br>');
+
+
+    //等腰三角形
+    var num = 5;
+    for (var i = 0; i <= num; i++) {
+        for (var j = i; j <= num; j++) {
+            document.write('&nbsp;');
+        }
+        for (var a = 0; a < i; a++) {
+            document.write('*' + '&nbsp;');
+        }
+        document.write('<br>');
+    }
+    document.write('<br>');
+
+    //梯形
+    var num = 5;
+    for (var i = 0; i <= num; i++) {
+        for (var j = i; j <= num; j++) {
+            document.write('&nbsp;');
+        }
+        for (var a = 0; a < i + 6; a++) {
+            document.write('*' + '&nbsp;');
+        }
+        document.write('<br>');
+    }
+</script>
+
+</html>

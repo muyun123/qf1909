@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="del" type="button" value="删除">
+    <input id="add" type="button" value="添加">
+    <input id="get" type="button" value="获取">
+</body>
+<script>
+    (() => {
+        var del = document.getElementById('del')
+        var add = document.getElementById('add')
+        var get = document.getElementById('get')
+        del.onclick = () => {
+            var time = new Date();
+            time.setDate(time.getDate() - 1);
+            document.cookie = 'name=user;expires=' + time + ';path=/';
+        }
+        add.onclick = () => {
+            document.cookie = 'user=1234;path=/';
+        }
+        get.onclick = () => {
+            console.log(document.cookie);
+        }
+    })();
+</script>
+
+</html>

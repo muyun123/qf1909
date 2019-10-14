@@ -1,0 +1,565 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 1226px;
+  height: 100%;
+  margin: auto;
+}
+
+.clear::after {
+  content: "";
+  height: 0;
+  overflow: hidden;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+#xiaomi .top-nav {
+  width: 100%;
+  height: 40px;
+  background: #333333;
+}
+
+#xiaomi .top-nav .nav-left {
+  float: left;
+}
+
+#xiaomi .top-nav .nav-right {
+  float: right;
+}
+
+#xiaomi .top-nav .nav-right .list1 li:last-child {
+  position: relative;
+}
+
+#xiaomi .top-nav .nav-right .list1 li:last-child i {
+  padding-left: 18px;
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+  width: 18px;
+  height: 14px;
+  color: #ccc;
+}
+
+#xiaomi .top-nav .nav-right .list1 li:last-child a {
+  display: inline-block;
+  padding: 0 20px 0 40px;
+  background: #424242;
+  line-height: 40px;
+}
+
+#xiaomi .top-nav .nav-right .list1 li:last-child a .list2-sub {
+  color: #333333;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+  height: 0;
+  transition: height 0.4s;
+  box-shadow: 0 10px 10px #ccc;
+  z-index: 999;
+}
+
+#xiaomi .top-nav .nav-right .list1 li:last-child a .list2-sub li {
+  width: 100%;
+}
+
+#xiaomi .top-nav .nav-right .list1 li:last-child a:hover,
+#xiaomi .top-nav .nav-right .list1 li:last-child a:hover i {
+  background: #ffffff;
+  color: #ff6700;
+}
+
+#xiaomi .top-nav .nav-right .list1 li:last-child a:hover .list2-sub {
+  height: 100px;
+}
+
+#xiaomi .top-nav .nav-right .list1 li:hover .list2-sub {
+  height: 100px;
+  background: #ffffff;
+}
+
+#xiaomi .top-nav .list1 li {
+  float: left;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+#xiaomi .top-nav .list1 li a {
+  color: #ccc;
+  padding: 0 7px;
+  line-height: 40px;
+}
+
+#xiaomi .top-nav .list1 li a:hover {
+  color: white;
+}
+
+#xiaomi .sub-nav {
+  height: 100px;
+  position: relative;
+}
+
+#xiaomi .sub-nav .content {
+  display: flex;
+}
+
+#xiaomi .sub-nav .logo-a {
+  display: inline-block;
+  width: 234px;
+  height: 100%;
+}
+
+#xiaomi .sub-nav .logo-a a {
+  margin-top: 22px;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  background: url(../images/CSSSatyr.png) no-repeat 0 0;
+  transition: background 0.2s;
+}
+
+#xiaomi .sub-nav .logo-a a:hover {
+  background: url(../images/CSSSatyr.png) no-repeat -60px 0;
+}
+
+#xiaomi .sub-nav .list1 {
+  width: 604px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#xiaomi .sub-nav .list1 li {
+  height: 100px;
+}
+
+#xiaomi .sub-nav .list1 li a {
+  display: block;
+  color: #000;
+  line-height: 100px;
+}
+
+#xiaomi .sub-nav .list1 li span {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  z-index: 999;
+  transition: height 0.4s;
+}
+
+#xiaomi .sub-nav .list1 li span a {
+  width: 202px;
+  height: 230px;
+  line-height: 14px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#xiaomi .sub-nav .list1 li span a img {
+  width: 120px;
+  height: 120px;
+}
+
+#xiaomi .sub-nav .list1 li span a p:nth-of-type(1) {
+  margin-top: 15px;
+}
+
+#xiaomi .sub-nav .list1 li span a p:nth-of-type(2) {
+  margin-top: 7px;
+  color: #ff6700;
+}
+
+#xiaomi .sub-nav .list1 li span i {
+  height: 103px;
+  background: #ccc;
+  width: 1px;
+  margin-top: 36px;
+}
+
+#xiaomi .sub-nav .list1 li:hover span {
+  height: 230px;
+  border-top: 1px solid #ccc;
+}
+
+#xiaomi .sub-nav .list1 li:hover > a {
+  color: #ff6700;
+}
+
+#xiaomi .sub-nav form {
+  width: 388px;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#xiaomi .sub-nav form input[type=text] {
+  width: 243px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+#xiaomi .sub-nav form input[type=submit] {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #ccc;
+  border-left: 0;
+  background: #ffffff;
+}
+
+#xiaomi .banner .banner1 {
+  position: relative;
+}
+
+#xiaomi .banner .banner1 .banner-img {
+  overflow: hidden;
+}
+
+#xiaomi .banner .banner1 .banner-img a {
+  display: block;
+}
+
+#xiaomi .banner .banner1 .banner-img img {
+  width: 100%;
+}
+
+#xiaomi .banner .banner1 .left-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 234px;
+  height: 460px;
+  background: rgba(162, 165, 165, 0.4);
+}
+
+#xiaomi .banner .banner1 .left-nav .list1 {
+  margin-top: 20px;
+}
+
+#xiaomi .banner .banner1 .left-nav .list1 li a {
+  padding-left: 30px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 42px;
+}
+
+#xiaomi .banner .banner1 .left-nav .list1 li a i {
+  float: right;
+  margin-right: 24px;
+  font-size: 14px;
+  color: #ececec;
+}
+
+#xiaomi .banner .banner1 .left-nav .list1 li a:hover {
+  background: #ff6700;
+}
+
+#xiaomi .banner .banner1 .left-nav .list1 li .list2 {
+  position: absolute;
+  top: 0;
+  left: 234px;
+  z-index: 9999;
+  height: 460px;
+  width: 741px;
+  background: #ffffff;
+  position: absolute;
+  padding: 20px 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: none;
+}
+
+#xiaomi .banner .banner1 .left-nav .list1 li .list2 li {
+  width: 247px;
+  display: flex;
+  padding-left: 20px;
+  box-sizing: border-box;
+  margin-top: 34px;
+}
+
+#xiaomi .banner .banner1 .left-nav .list1 li .list2 li img {
+  height: 40px;
+}
+
+#xiaomi .banner .banner1 .left-nav .list1 li .list2 li a {
+  color: #000;
+}
+
+#xiaomi .banner .banner1 .left-nav .list1 li .list2 li a:hover {
+  color: #ff6700;
+  background: none;
+}
+
+#xiaomi .banner .banner1 .left-nav .list1 li .list2 li:nth-child(6n+1) {
+  margin-top: 0;
+}
+
+#xiaomi .banner .banner1 .left-nav .list1 li:hover .list2 {
+  display: flex;
+}
+
+#xiaomi .banner-footer {
+  height: 170px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+#xiaomi .banner-footer .kuai1 {
+  float: left;
+  width: 234px;
+  height: 100%;
+}
+
+#xiaomi .banner-footer .kuai1 .list1 {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #5F5750;
+}
+
+#xiaomi .banner-footer .kuai1 .list1 li {
+  width: 70px;
+  height: 75px;
+  float: left;
+}
+
+#xiaomi .banner-footer .kuai1 .list1 li a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  color: #a09b9b;
+}
+
+#xiaomi .banner-footer .kuai1 .list1 li a span {
+  display: block;
+  margin-top: 10px;
+}
+
+#xiaomi .banner-footer .kuai1 .list1 li a span:first-child {
+  display: block;
+  margin: auto;
+  margin-top: 12px;
+  width: 24px;
+  height: 24px;
+  background: url(../images/272.png) no-repeat;
+  background-size: 24px;
+}
+
+#xiaomi .banner-footer .kuai1 .list1 li a:hover {
+  color: #ffffff;
+}
+
+#xiaomi .banner-footer .kuai2 {
+  width: 316px;
+  height: 170px;
+  float: left;
+  margin-left: 14px;
+}
+
+#xiaomi .banner-footer .kuai2 a {
+  display: block;
+}
+
+#xiaomi .banner-footer .kuai2 a img {
+  width: 100%;
+}
+
+#xiaomi .ul-adv {
+  margin-top: 20px;
+}
+
+#xiaomi .ul-adv a {
+  display: block;
+}
+
+#xiaomi .ul-adv a img {
+  width: 100%;
+}
+
+#xiaomi .main {
+  margin-top: 40px;
+  width: 100%;
+  background: #F5F5F5;
+  overflow: hidden;
+}
+
+#xiaomi .main .title {
+  margin-top: 40px;
+}
+
+#xiaomi .main .title span {
+  float: left;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+#xiaomi .main .title a {
+  display: inline-block;
+  float: right;
+}
+
+#xiaomi .main .title a span {
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#xiaomi .main .title a i {
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+  color: #fcfcfc;
+  background: #ccc;
+}
+
+#xiaomi .main .title a:hover span {
+  color: #ff6700;
+}
+
+#xiaomi .main .title a:hover i {
+  background: #ff6700;
+}
+
+#xiaomi .main .art1 {
+  margin-top: 18px;
+  height: 614px;
+  width: 100%;
+}
+
+#xiaomi .main .art1 .d-left {
+  float: left;
+  height: 100%;
+  width: 234px;
+}
+
+#xiaomi .main .art1 .d-left a {
+  display: block;
+}
+
+#xiaomi .main .art1 .d-left a img {
+  width: 100%;
+}
+
+#xiaomi .main .art1 .d-right {
+  float: right;
+  height: 100%;
+  width: 978px;
+}
+
+#xiaomi .main .art1 .d-right .list1 li {
+  width: 234px;
+  height: 300px;
+  float: left;
+  margin-left: 14px;
+}
+
+#xiaomi .main .art1 .d-right .list1 li a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+#xiaomi .main .art1 .d-right .list1 li a img {
+  height: 162px;
+}
+
+#xiaomi .main .art1 .d-right .list1 li a .lvse:nth-of-type(1) {
+  padding: 0 20px;
+  width: 64px;
+  line-height: 20px;
+  font-size: 16px;
+  background: #83C44E;
+  color: #ffffff;
+}
+
+#xiaomi .main .art1 .d-right .list1 li a .hongse {
+  margin: auto;
+  padding: 0 5px;
+  line-height: 20px;
+  font-size: 16px;
+  background: red;
+  color: #ffffff;
+}
+
+#xiaomi .main .art1 .d-right .list1 li a p:nth-of-type(2) {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000;
+}
+
+#xiaomi .main .art1 .d-right .list1 li a p:nth-of-type(3) {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #a5a5a5;
+}
+
+#xiaomi .main .art1 .d-right .list1 li a p:nth-of-type(4) {
+  margin-top: 16px;
+}
+
+#xiaomi .main .art1 .d-right .list1 li a p:nth-of-type(4) span:first-child {
+  font-size: 12px;
+  color: #ff6700;
+}
+
+#xiaomi .main .art1 .d-right .list1 li a p:nth-of-type(4) span:last-child {
+  font-size: 12px;
+  color: #a5a5a5;
+  text-decoration: line-through;
+}
+
+#xiaomi .main .art1 .d-right .list1 li:nth-child(4n+1) {
+  margin-left: 0;
+}
+
+#xiaomi .main .art1 .d-right .list1 li:nth-child(n+5) {
+  margin-top: 14px;
+}
+
+#xiaomi .main .ul-adv {
+  margin-top: 40px;
+}
+
+#xiaomi .main .main-art2 .d-right {
+  width: 100%;
+}
+
+#xiaomi .main .main-art2 .d-right .list1 li:nth-child(-n+5) {
+  margin-top: 0;
+}
+
+#xiaomi .main .main-art2 .d-right .list1 li:nth-child(n+2) {
+  margin-left: 14px;
+}
+
+#xiaomi .main .main-art2 .d-right .list1 li:nth-child(6) {
+  margin-left: 0;
+}

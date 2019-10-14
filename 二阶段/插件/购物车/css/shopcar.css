@@ -1,0 +1,238 @@
+  * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+
+  .goods {
+      width: 90%;
+      margin: auto;
+      margin-top: 20px;
+      text-align: center;
+  }
+
+  .goods .menu {
+      height: 20px;
+      text-align: center;
+  }
+
+  .goods .menu .checkbox {
+      width: 10%;
+      float: left;
+  }
+
+  .goods .menu .menu1 {
+      width: 25%;
+      float: left;
+  }
+
+  .goods .menu .menu2 {
+      width: 11%;
+      float: left;
+  }
+
+  .goods .menu .menu3 {
+      width: 7%;
+      float: left;
+  }
+
+  .goods .goodlist .gooditems {
+      width: 100%;
+      height: 130px;
+      border: 1px solid #ccc;
+      background: #fff8e1;
+      box-sizing: border-box;
+      padding: 20px 20px;
+      margin-top: 30px;
+      border-radius: 5px;
+  }
+
+  .goods .goodlist .gooditems .goodCB {
+      width: 2%;
+      float: left;
+  }
+
+  .goods .goodlist .gooditems .goodinfo {
+      width: 30%;
+      float: left;
+      margin-left: 10px;
+  }
+
+  .goods .goodlist .gooditems .goodinfo .goodimg {
+      float: left;
+  }
+
+  .goods .goodlist .gooditems .goodinfo .goodtitle {
+      width: 240px;
+      margin-left: 10px;
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: 20px;
+      color: #262626;
+      text-align: left;
+      text-indent: 2rem;
+  }
+
+  .goods .goodlist .gooditems .googcanshu {
+      width: 15%;
+      float: left;
+      font-size: 12px;
+      line-height: 16px;
+      color: #9c9c9c;
+      margin-left: 80px;
+  }
+
+  .goods .goodlist .gooditems .price {
+      width: 5%;
+      float: left;
+      font-size: 12px;
+      margin-left: 100px;
+  }
+
+  .goods .goodlist .gooditems .price .old {
+      color: #9c9c9c;
+      text-decoration: line-through;
+  }
+
+  .goods .goodlist .gooditems .price .now {
+      color: #ff4400;
+      font-weight: bold;
+  }
+
+  .goods .goodlist .gooditems .form {
+      width: 8%;
+      float: left;
+      margin-left: 80px;
+      position: relative;
+  }
+
+  .goods .goodlist .gooditems .form .tishi {
+      position: absolute;
+      display: inline-block;
+      width: 180px;
+      height: 20px;
+      border: 1px solid #ff4400;
+      font-size: 12px;
+      color: #3c3c3c;
+      background: #fff2f2;
+      top: 50px;
+      left: 0px;
+      line-height: 20px;
+      text-align: center;
+      display: none;
+  }
+
+  .goods .goodlist .gooditems .form .decrease,
+  .add {
+      width: 20px;
+      height: 27px;
+      border: 1px solid #ffe1d3;
+      color: #efbba9;
+      background: #fff0e7;
+  }
+
+  .goods .goodlist .gooditems .form .add {
+      margin-left: -6px;
+  }
+
+  .goods .goodlist .gooditems .form .valnum {
+      width: 40px;
+      height: 25px;
+      border: 1px solid #efbba9;
+      font-size: 12px;
+      color: #846c6c;
+      text-align: center;
+      margin-left: -6px;
+  }
+
+  .goods .goodlist .gooditems .sumprice {
+      width: 6%;
+      font-size: 14px;
+      color: #ff4400;
+      font-weight: bold;
+      float: left;
+      margin-left: 30px;
+  }
+
+  .goods .goodlist .gooditems .del {
+      width: 70px;
+      height: 35px;
+      border-radius: 5px;
+      background: #ff4400;
+      float: left;
+      line-height: 35px;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: 20px;
+  }
+
+  .goods .goodlist .gooditems .delinfo {
+      display: block;
+      color: #fff;
+  }
+
+  .goods .b_debottom {
+      border-radius: 5px;
+      width: 100%;
+      height: 60px;
+      background: #ccc;
+      margin-top: 20px;
+      font-size: 14px;
+      box-sizing: border-box;
+      padding: 20px 20px;
+      position: relative;
+  }
+
+  .goods .b_debottom .b_checkAll {
+      float: left;
+  }
+
+  .goods .b_debottom #b_delete {
+      float: left;
+      margin-left: 50px;
+      color: blue;
+      cursor: pointer;
+  }
+
+  .goods .b_debottom .b_col {
+      float: left;
+      position: absolute;
+      right: 300px;
+      font-size: 15px;
+      color: #3c3c3c;
+  }
+
+  .goods .b_debottom .b_col #select,
+  #b_price {
+      font-size: 15px;
+      color: #ff4400;
+      padding: 0px 3px;
+  }
+
+  .goods .b_debottom .b_sum {
+      float: left;
+      position: absolute;
+      right: 170px;
+      font-size: 15px;
+      color: #3c3c3c;
+  }
+
+  .goods .b_debottom .b_suan {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 150px;
+      height: 100%;
+      line-height: 60px;
+      text-align: center;
+      color: #FFF;
+      font-size: 18px;
+      background: #ff4400;
+      cursor: pointer;
+  }
+
+  .goods .b_debottom .b_jie {
+      cursor: no-drop;
+      background: #B0B0B0;
+  }

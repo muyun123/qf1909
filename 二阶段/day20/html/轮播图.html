@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        dl,
+        li {
+            list-style: none;
+        }
+
+        #box {
+            width: 520px;
+            height: 280px;
+            position: relative;
+            margin: 100px auto;
+            /* background: pink; */
+            overflow: hidden;
+        }
+
+
+        #box #list li {
+            width: 520px;
+            height: 280px;
+            float: left;
+            position: absolute;
+            top: 0;
+            /* left: 520px; */
+        }
+
+        #box #list li a {
+            display: block
+        }
+
+        #box #list li img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #box .prev {
+            display: none;
+            width: 36px;
+            height: 80px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: url(../images/TB1RRgqIpX0.png);
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        #box .prev:hover {
+            opacity: 1;
+        }
+
+        #box .next {
+            display: none;
+            width: 36px;
+            height: 80px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: url(../images/TB1e7o1.png);
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        #box .next:hover {
+            opacity: 1;
+        }
+
+        #box .circle {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .circle span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            margin-right: 8px;
+        }
+
+        .circle span:hover {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ff6700;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        .circle .active {
+            background: #ff6700;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul id='list'>
+            <!-- <li><a href=""><img src="../images/TB134ufe4n1gK0j.jpg_.webp" alt=""></a></li>
+            <li><a href=""><img src="../images/TB1DjMZeVP7.jpg_.webp" alt=""></a></li>
+            <li><a href=""><img src="../images/TB1ZnESa.jpg_.webp" alt=""></a></li>
+            <li><a href=""><img src="../images/TB1ZnESeAL0gK0j.jpg_.webp" alt=""></a></li>
+            <li><a href=""><img src="../images/TB1aM7zeHr1.jpg" alt=""></a></li> -->
+        </ul>
+        <div class="prev"></div>
+        <div class="next"></div>
+        <div class="circle">
+            <!-- <span></span>
+            <span></span> -->
+        </div>
+    </div>
+</body>
+<script src="../js/common.js"></script>
+<script>
+    (function () {
+        var list = document.getElementById('list');
+        var box = document.getElementById('box');
+        var prev = document.getElementsByClassName('prev')[0];
+        var next = document.getElementsByClassName('next')[0];
+        var circle = document.getElementsByClassName('circle')[0];
+        var img = ['../images/TB134ufe4n1gK0j.jpg_.webp',
+            '../images/TB1DjMZeVP7.jpg_.webp',
+            '../images/TB1ZnESa.jpg_.webp',
+            '../images/TB1ZnESeAL0gK0j.jpg_.webp',
+            '../images/TB1aM7zeHr1.jpg'
+        ];
+        var html = img.map(function (item) {
+            return `<li><a href=""><img src="${item}" alt=""></a></li>`;
+        }).join('');
+        list.innerHTML = html;
+
+        var html = '';
+        for (var i = 0; i < img.length; i++) {
+            html += `<span></span>`;
+        }
+        circle.innerHTML = html;
+        var iw = list.children[0].offsetWidth;
+        for (var i = 0; i < list.children.length; i++) {
+            list.children[i].style.left = iw + 'px';
+        }
+        //图片轮播初始值
+        var now = 0;
+        list.children[now].style.left = 0; //初始显示第一张图
+        movecircle()
+        //下一张图片
+        function nextr() {
+            startMove(list.children[now], {
+                left: -iw
+            });
+            now++;
+            if (now >= list.children.length) {
+                now = 0;
+            }
+            list.children[now].style.left = iw + 'px';
+            startMove(list.children[now], {
+                left: 0
+            });
+            movecircle()
+        }
+        //上一张图片
+        function prevr() {
+            startMove(list.children[now], {
+                left: iw
+            });
+            now--;
+            if (now < 0) {
+                now = list.children.length - 1;
+            }
+            list.children[now].style.left = -iw + 'px';
+            startMove(list.children[now], {
+                left: 0
+            });
+            movecircle()
+        }
+        //定时器
+        var timer = setInterval(nextr, 2000);
+        //鼠标移入停止轮播
+        box.onmouseover = function () {
+            css(prev, 'display', 'block');
+            css(next, 'display', 'block');
+            clearInterval(timer);
+        }
+        //鼠标移入开始轮播
+        box.onmouseout = function () {
+            css(prev, 'display', 'none');
+            css(next, 'display', 'none');
+            timer = setInterval(nextr, 2000);
+        }
+        //点击上一张显示
+        prev.onclick = function () {
+            prevr();
+        }
+        //点击下一张显示
+        next.onclick = function () {
+            nextr();
+        }
+        //给焦点下标
+        for (var i = 0; i < circle.children.length; i++) {
+            circle.children[i].index = i;
+        }
+        //点击焦点图事件
+        circle.onclick = function (ev) {
+            if (ev.target.tagName.toLowerCase() == 'span') {
+                if (ev.target.index < now) {
+                    startMove(list.children[now], {
+                        left: iw
+                    });
+                    list.children[ev.target.index].style.left = -iw + 'px';
+                    startMove(list.children[ev.target.index], {
+                        left: 0
+                    });
+                } else if (ev.target.index > now) {
+                    startMove(list.children[now], {
+                        left: -iw
+                    });
+                    list.children[ev.target.index].style.left = iw + 'px';
+                    startMove(list.children[ev.target.index], {
+                        left: 0
+                    });
+                }
+                now = ev.target.index;
+                movecircle()
+            }
+        }
+
+        function movecircle() {
+            for (var i = 0; i < circle.children.length; i++) {
+                circle.children[i].className = '';
+            }
+            circle.children[now].className = 'active';
+        }
+    })();
+</script>
+
+</html>

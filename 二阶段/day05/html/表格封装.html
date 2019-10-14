@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #output {
+        margin-top: 20px;
+    }
+
+    table {
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td {
+        border: 1px solid #ddd;
+        padding: 3px 5px;
+    }
+</style>
+
+<body>
+    <h1>生成任意表格</h1>
+    <label for="row">行：</label><input type="text" id="row">
+    <label for="col">列：</label><input type="text" id="col">
+    <input type="button" value="生成表格" id="btn">
+    <div id="output">
+
+    </div>
+</body>
+<script>
+    (
+        function () {
+            var row = document.getElementById('row');
+            var col = document.getElementById('col');
+            var btn = document.getElementById('btn');
+            var output = document.getElementById('output');
+
+            function create() {
+                var num1 = row.value;
+                var num2 = col.value;
+
+
+                if (num1 && num2) {
+                    var html = '<table>';
+                    for (var i = 0; i < num1; i++) {
+                        html += '<tr>';
+                        for (var j = 0; j < num2; j++) {
+                            html += '<td>' + j + '</td>';
+                        }
+                        html += '</tr>';
+                    }
+                    html += '</table>';
+
+                }
+                output.innerHTML = html;
+            }
+            btn.onclick = function () {
+                create();
+            }
+        }
+    )();
+</script>
+
+</html>

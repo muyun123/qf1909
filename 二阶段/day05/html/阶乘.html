@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num1">
+    <input type="submit" id="btn"> 阶乘的结果 <span id="num2"></span>
+</body>
+<script>
+    (
+        function () {
+            var btn = document.getElementById('btn');
+            var num1 = document.getElementById('num1');
+            var num2 = document.getElementById('num2');
+
+
+            function factorial(num) {
+
+                var num4 = 1;
+                if (num) {
+
+                    for (var i = 1; i <= num; num--) {
+                        num4 *= num;
+                    }
+                    return num4;
+                } else {
+                    return '请输入正确的数字';
+                }
+
+            }
+
+            btn.onclick = function () {
+                var num3 = num1.value;
+                var res = factorial(num3);
+                num2.innerHTML = res;
+            }
+        }
+    )();
+</script>
+
+</html>

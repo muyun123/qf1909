@@ -1,0 +1,73 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 874px;
+    height: 256px;
+    background: #fff;
+    
+}
+.box ul{
+     width: 874px;
+    height: 256px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.box li{
+    width: 104px;
+    height: 104px;
+    background: #E7E7E7;
+    border-radius: 5px;
+    box-shadow: 0 -5px 0 #BBBBBB inset,
+                0 5px 0 #ffff inset,
+                -5px 0px 0 #D7D7D7 inset,
+                5px 0px 0 #D7D7D7 inset;
+display: flex;
+padding:10px;
+box-sizing: border-box;
+}
+span{
+    width: 24px;
+    height: 24px;
+    border-radius: 50% 50%;
+    background: #000;
+}
+.box li:nth-child(1){
+    justify-content: center;
+    align-items: center;
+}
+.box li:nth-child(n+2){
+    justify-content: space-between;
+}
+.box li:nth-child(2) span:nth-child(2),
+.box li:nth-child(3) span:nth-child(3){
+    align-self: flex-end;
+}
+.box li:nth-child(3) span:nth-child(2),
+.box li:nth-child(5) div:nth-child(2){
+    align-self: center;
+}
+.box li div{
+    display: flex;
+    flex-direction: column;
+}
+.box li:nth-child(n+4) div{
+justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+

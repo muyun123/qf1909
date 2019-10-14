@@ -1,0 +1,140 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ ul,
+ ol,
+ dl {
+     list-style: none;
+ }
+
+ .clear::after {
+     content: '';
+     width: 0;
+     overflow: hidden;
+     clear: both;
+     display: block;
+     text-overflow: hidden;
+ }
+
+ #header {
+     font-size: 100px;
+     text-align: center;
+ }
+
+ #header-nav #headerlist {
+     height: 100px;
+     margin: 50px 20px 50px 100px;
+     float: left;
+ }
+
+ #header-nav #headerlist li {
+     float: left;
+     margin-right: 20px;
+     text-align: center;
+ }
+
+ #header-nav #headerlist li a {
+     display: block;
+     padding: 0 50px;
+     line-height: 40px;
+     background: #ccc;
+ }
+
+ #header-nav #message {
+     float: left;
+     margin: 50px 0;
+ }
+
+ #header-nav #headerlist li a:hover {
+     background: #ff6700;
+ }
+
+ #header-nav #message div {
+     line-height: 40px;
+     float: left;
+     background: #ccc;
+     margin-right: 20px;
+     padding: 0 10px;
+ }
+
+
+
+
+ #loginare {
+     position: absolute;
+     left: 0;
+     right: 0;
+     margin: auto;
+     width: 300px;
+     height: 600px;
+     background: #fff;
+     padding: 15px;
+     box-sizing: border-box;
+ }
+
+ #loginare fieldset {
+     padding: 10px;
+     font-size: 14px;
+     margin-bottom: 20px;
+     margin-top: 20px;
+ }
+
+ #loginare fieldset:first-child {
+     display: none;
+ }
+
+
+ #username1,
+ #password1,
+ #username2,
+ #password2 {
+     float: right;
+
+     margin-right: 20px;
+ }
+
+ #usedname {
+     float: right;
+     margin: 5px 60px 5px 0;
+ }
+
+ #username,
+ #password,
+ #username3,
+ #password3 {
+     margin-left: 5px;
+     height: 30px;
+     font-size: 18px;
+     width: 160px;
+ }
+
+ #checkbox1 {
+     float: right;
+     margin-right: 140px;
+ }
+
+ #btn,
+ #btn2 {
+     float: right;
+     margin-right: 180px;
+     margin-top: 10px;
+     background: #fff;
+     border: 1px solid #ccc;
+     line-height: 24px;
+     padding: 0 10px;
+     margin-bottom: 20px;
+ }
+
+ #regbo {
+     float: right;
+ }
+
+ #tuichu {
+     cursor: pointer;
+ }

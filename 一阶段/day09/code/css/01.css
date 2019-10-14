@@ -1,0 +1,50 @@
+.shiyin .conten{
+    width: 989px;
+    margin: 0 auto;
+}
+.shiyin .weixin{
+    float: left;
+    width: 246px;
+    background: #FAFAFA;
+    padding-bottom: 62px;
+    border-bottom: 1px solid rgb(243, 233, 233);
+}
+.shiyin .weixin .wei2{
+    /* width: 246px; */
+    height:58px;
+    background:url(../images/weixin.png) no-repeat 6px 8px, url(../images/bg.png);
+    padding-left: 70px;
+    line-height: 60px;
+    font-size: 20px;
+    
+}
+.shiyin .weixin .weiu{
+    padding-left: 50px;
+    font-size: 16px;
+    line-height: 16px;
+}
+.shiyin .weixin .weiu li{
+margin-top: 27px;
+}
+
+.shiyin .art{
+    width: 743px;
+    float: left;
+}
+.shiyin .art .heamg{
+    background: #FAFAFA;
+    text-align: center;
+    padding-top: 16px;
+}
+.shiyin .art .artu{
+    width: 695px;
+    margin: 0 auto;
+}
+.shiyin .art .artu div{
+    display: inline-block;
+    float: left
+}
+.shiyin .art .artu li{
+ padding:20px 0; 
+ border-bottom: 1px solid #ccc;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生成任意表格</title>
+    <style>
+        #output {
+            margin-top: 20px;
+        }
+
+        table {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 3px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>生成任意表格</h1>
+    <label for="row">行：</label><input type="text" id="row">
+    <label for="col">列：</label><input type="text" id="col">
+    <input type="button" value="生成表格" id="btn">
+    <div id="output">
+
+    </div>
+</body>
+<script>
+    var row = document.getElementById('row');
+    var col = document.getElementById('col');
+    var btn = document.getElementById('btn');
+    var output = document.getElementById('output');
+    btn.onclick = function () {
+        var row1 = row.value;
+        console.log(row1);
+        var col1 = col.value;
+        var html = '<table>';
+        if (row1 && col1) {
+            for (i = 1; i <= row1; i++) {
+                html += '<tr>' + '<td>' + i + '</td>';
+                for (var j = 0; j < col1; j++) {
+                    html += '<td>' + (i + j) + '</td>';
+                }
+                html += '<td>' + '操作' + '</td>' + '</tr>'
+            }
+            html += '</table>'
+            output.innerHTML = html;
+        } else {
+            alert('输入数字');
+        }
+        var tab = document.getElementsByTagName('tr');
+        for (i = 0; i < row1; i++) {
+            if (i % 2 == 0) {
+                tab[i].style.background = 'pink';
+            } else {
+                tab[i].style.background = '#58bc58';
+            }
+        }
+
+    }
+</script>
+
+
+</html>

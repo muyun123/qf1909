@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>猜字游戏</title>
+</head>
+
+<body>
+    <input type="text" id="num1" placeholder="输入1~100">
+    <input type="submit" id="tijiao">
+</body>
+<script>
+    var num1 = document.getElementById('num1');
+    var tijiao = document.getElementById('tijiao');
+    var num2;
+    num2 = parseInt(Math.random() * 100) + 1;
+    console.log(num2);
+
+    tijiao.onclick = function () {
+        var val = num1.value;
+        if (val) {
+            if (val == num2) {
+                alert('猜对了');
+            } else if (val < 0) {
+                alert('请输入1~100的数');
+            } else if (val < num2) {
+                alert('小了');
+            } else if (val > num2) {
+                alert('大了');
+            } else {
+                alert('猜错了');
+            }
+        } else {
+            alert('不能为空');
+        }
+
+    }
+</script>
+
+</html>

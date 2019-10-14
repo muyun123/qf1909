@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    1!+2!+3!+4!+5!…20! <input type="submit" id="btn" value="等于"><span id="res"></span>
+</body>
+<script>
+    var btn = document.getElementById('btn');
+    var res = document.getElementById('res');
+    var num3 = 1;
+    var num4 = 0;
+    btn.onclick = function () {
+
+        for (var i = 1; i < 21; i++) {
+            num3 = 1;
+            for (var j = i; j > 0; j--) {
+                num3 *= j;
+                console.log(num3, i, j);
+            }
+            num4 = num4 + num3;
+        }
+        res.innerHTML = num4;
+    }
+</script>
+
+</html>

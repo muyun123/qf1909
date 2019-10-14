@@ -1,0 +1,271 @@
+.content {
+  width: 91.46667vw;
+  height: 100%;
+  margin: auto;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#hunliji {
+  overflow: hidden;
+  width: 100%;
+  height: 100;
+}
+
+#hunliji .hunliji-header {
+  position: relative;
+}
+
+#hunliji .hunliji-header .nva-hea {
+  height: 14.4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 27.73333vw;
+  box-sizing: border-box;
+  background: url(../imags/images/logo.png) no-repeat 0 center;
+  background-size: 24.8vw 8.53333vw;
+}
+
+#hunliji .hunliji-header .nva-hea a {
+  font-size: 2.93333vw;
+  line-height: 8.53333vw;
+  color: #000;
+}
+
+#hunliji .hunliji-header .nva-hea .fa {
+  font-size: 4.26667vw;
+}
+
+#hunliji .hunliji-header .hidden-nva {
+  display: none;
+  height: 29.33333vw;
+  width: 100%;
+  border-top: 1px solid salmon;
+  position: absolute;
+  top: 14.4vw;
+  left: 0;
+  background: #fff;
+}
+
+#hunliji .hunliji-header .hidden-nva .list1 {
+  height: 24.93333vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#hunliji .hunliji-header .hidden-nva .list1 li {
+  width: 22.66667vw;
+}
+
+#hunliji .hunliji-header .hidden-nva .list1 li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.33333vw;
+  color: #1b1b1b;
+}
+
+#hunliji .hunliji-header .hidden-nva .list1 li a img {
+  width: 10.4vw;
+}
+
+#hunliji .hunliji-header .banner {
+  height: 36.53333vw;
+  width: 100%;
+  position: relative;
+}
+
+#hunliji .hunliji-header .banner .list1 li {
+  width: 100%;
+  border-radius: 2.93333vw 2.93333vw 0 0;
+}
+
+#hunliji .hunliji-header .banner .list1 li a {
+  display: block;
+  width: 100%;
+  border-radius: 2.93333vw 2.93333vw 0 0;
+}
+
+#hunliji .hunliji-header .banner .list1 li a img {
+  width: 100%;
+  border-radius: 2.93333vw 2.93333vw 0 0;
+}
+
+#hunliji .hunliji-header .banner .lo1 {
+  position: absolute;
+  bottom: -0.4vw;
+}
+
+#hunliji .hunliji-header .banner .lo1 img {
+  width: 100vw;
+}
+
+#hunliji .hunliji-nva {
+  height: 46.13333vw;
+  width: 100%;
+}
+
+#hunliji .hunliji-nva .list2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#hunliji .hunliji-nva .list2 li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16vw;
+}
+
+#hunliji .hunliji-nva .list2 li a img {
+  width: 16vw;
+}
+
+#hunliji .hunliji-nva .list2 li a span {
+  font-size: 2.66667vw;
+  line-height: 2.93333vw;
+  color: #252525;
+}
+
+#hunliji .hunli {
+  height: 44.53333vw;
+  width: 100%;
+}
+
+#hunliji .hunli .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#hunliji .hunli .hunli-left {
+  width: 44.8vw;
+  display: flex;
+}
+
+#hunliji .hunli .hunli-left a {
+  border-radius: 2.66667vw;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../imags/images/o_1cliarnre1kk49dc1sa3kiqe4g9.png) no-repeat;
+  background-size: cover;
+}
+
+#hunliji .hunli .hunli-right {
+  width: 44.8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#hunliji .hunli .hunli-right a {
+  border-radius: 1.33333vw;
+}
+
+#hunliji .hunli .hunli-right a:first-child {
+  width: 100%;
+  display: block;
+  height: 21.06667vw;
+  background: url(../imags/images/o_1cliau3cmq3ca6q1kvf16hvdvc9.png) no-repeat;
+  background-size: cover;
+}
+
+#hunliji .hunli .hunli-right a:nth-child(2) {
+  width: 100%;
+  display: block;
+  height: 21.06667vw;
+  background: url(../imags/images/o_1d21g6g94cug1q4a1lr3ne19q19.jpg) no-repeat;
+  background-size: cover;
+}
+
+#hunliji .hunliji-main .main-h2 {
+  margin-top: 9.6vw;
+}
+
+#hunliji .hunliji-main .main-h2 .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#hunliji .hunliji-main .main-h2 h2 {
+  font-size: 5.06667vw;
+  line-height: 5.06667vw;
+  vertical-align: middle;
+}
+
+#hunliji .hunliji-main .main-h2 a {
+  font-size: 3.46667vw;
+  line-height: 3.46667vw;
+  color: #ccc;
+  vertical-align: middle;
+}
+
+#hunliji .hunliji-main .main1 {
+  height: 47.46667vw;
+  width: 100%;
+}
+
+#hunliji .hunliji-main .main1 .list1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  margin-top: 5.86667vw;
+}
+
+#hunliji .hunliji-main .main1 .list1 li:first-child {
+  margin-left: 2.66667vw;
+}
+
+#hunliji .hunliji-main .main1 .list1 li {
+  width: 37.33333vw;
+  height: 100%;
+  margin-right: 2.66667vw;
+}
+
+#hunliji .hunliji-main .main1 .list1 li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 37.33333vw;
+  height: 100%;
+  border-radius: 2vw;
+  box-shadow: 0 0 0.66667vw 0.4vw #ccc;
+}
+
+#hunliji .hunliji-main .main1 .list1 li a img {
+  width: 15.46667vw;
+  height: 15.46667vw;
+  border-radius: 50%;
+}
+
+#hunliji .hunliji-main .main1 .list1 li a p:nth-of-type(1) {
+  width: 26.66667vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 3.73333vw;
+  color: #000;
+}
+
+#hunliji .hunliji-main .main1 .list1 li a p:nth-of-type(2) {
+  font-size: 2.93333vw;
+  color: yellow;
+}
+
+#hunliji .hunliji-main .main1 .list1 li a span {
+  font-size: 2.93333vw;
+  color: #201f1f;
+}

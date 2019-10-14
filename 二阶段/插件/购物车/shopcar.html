@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/shopcar.css">
+</head>
+
+<body>
+    <div class="goods">
+        <div class="menu">
+            <div class="checkbox">
+                <input type="checkbox" id="goodCheckbox">
+                <span class="checkAll">全选</span>
+            </div>
+            <div class="menu1">商品信息</div>
+            <div class="menu1">商品参数</div>
+            <div class="menu2">单价</div>
+            <div class="menu2">数量</div>
+            <div class="menu2">金额</div>
+            <div class="menu3">操作</div>
+        </div>
+        <div class="goodlist">
+            <!-- <div class="gooditems">
+                <div class="goodCB">
+                    <input type="checkbox" class="goodsit_check">
+                </div>
+                <div class="goodinfo">
+                    <img src="../iamges/dd.png" alt="" class="goodimg">
+                    <span class="goodtitle">宇仔大刀肉辣条8090后儿时怀旧素食零食大礼包麻辣小吃湖南重庆特产</span>
+                </div>
+                <div class="googcanshu">
+                    口味：大刀肉2包（约76个）
+                </div>
+                <div class="price">
+                    <p class="old">￥23.6</p>
+                    <p class="now">￥10.3</p>
+                </div>
+                <div class="form">
+                    <input type="button" value="-" class="decrease">
+                    <input type="text" value="1" id="valnum">
+                    <input type="button" value="+" class="add">
+                    <span class="tishi">这已经是最少的宝贝数量了！</span>
+                    <span class="tishi">您所填写的宝贝数量超过库存！</span>
+                </div>
+                <div class="sumprice">
+                    ￥21.60
+                </div>
+                <div class="del">
+                    <a href="###" class="delinfo">删除</a>
+                </div>
+            </div> -->
+        </div>
+        <div class="b_debottom">
+            <div class="b_checkAll">
+                <input type="checkbox" id="b_checkedAll">
+                <span>全选</span>
+            </div>
+            <div id="b_delete">删除</div>
+            <div class="b_col">
+                <span>已选商品<span id="select">0</span>件</span>
+            </div>
+            <div class="b_sum">
+                <span>合计：<span id="b_price">0.00</span></span>
+            </div>
+            <div class="b_suan b_jie .bgl" id="jisuan">结算</div>
+        </div>
+    </div>
+</body>
+<script src="./js/sgopcar.js"></script>
+<script>
+    (() => {
+        shopcar({
+
+        });
+    })();
+</script>
+
+</html>

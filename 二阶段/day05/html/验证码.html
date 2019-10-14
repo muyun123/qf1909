@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num1"> <input type="submit" value="获取验证码" id="btn"><span id="res"></span>
+</body>
+<script>
+    (
+        function () {
+            var num1 = document.getElementById('num1');
+            var btn = document.getElementById('btn');
+            var res = document.getElementById('res');
+
+            function yzm() {
+                var num3 = '';
+                for (var i = 0; i < 4; i++) {
+                    var num2 = parseInt(Math.random() * 10);
+                    num3 += num2;
+                }
+                return num3;
+
+            }
+
+
+            function shuru() {
+                var num4 = num1.value;
+                if (num4 == num5) {
+                    res.innerHTML = '验证码正确';
+                } else {
+                    res.innerHTML = '验证码错误';
+                }
+            }
+            var num5 = '';
+            btn.onclick = function () {
+                num5 = yzm();
+                btn.value = num5;
+            }
+            num1.oninput = function () {
+                shuru();
+            }
+        })();
+</script>
+
+</html>

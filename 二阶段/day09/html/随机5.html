@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="submit" id="btn" value="点击随机">
+    <div id="box">
+
+    </div>
+</body>
+<script>
+    (function () {
+        var btn = document.getElementById('btn');
+        var box = document.getElementById('box');
+        //产生随机数
+        function randd() {
+            return String(parseInt(Math.random() * 10000));
+        }
+        btn.onclick = function () {
+            var arr = [];
+            var num1 = randd();
+            for (var i = 0; i < num1.length; i++) {
+                arr[i] = num1[i];
+            }
+            console.log(num1);
+            console.log(arr);
+            var html = `<p>本次随机数是${arr.length}位数</p>`;
+            html += arr.map(function (item) {
+                return `<p>分别是${item}</p>`;
+            }).join('');
+            box.innerHTML = html;
+        }
+
+
+    })();
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    计算任意数的阶乘<input type="text" id="num">! <input type="submit" id="tijiao"> <span id="num1"></span>
+</body>
+<script>
+    var num = document.getElementById('num');
+    var num1 = document.getElementById('num1');
+    var tijiao = document.getElementById('tijiao');
+    tijiao.onclick = function () {
+        var num2 = num.value - 0;
+        var num3 = 1;
+        if (num2 > 0) {
+            for (var i = 1; i <= num2; i++) {
+                num3 *= i;
+            }
+            num1.innerHTML = num3;
+        } else {
+            num1.innerHTML = '请输入大于0的数';
+        }
+
+    }
+</script>
+
+</html>

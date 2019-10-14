@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>商品总价</title>
+</head>
+
+<body>
+    <img src="../images/搜索04.png" alt="">
+    <form action="">
+        购买数量：<input type="button" value="-" id="sub">
+        <input type="text" id="shuliang" value="1">
+        <input type="button" value="+" id="add"> (最多购买6个)
+        <p>商品价格:￥99.90</p>
+        <p id="money">商品总价：￥99.90</p>
+    </form>
+</body>
+<script>
+    var sub = document.getElementById('sub');
+    var shuliang = document.getElementById('shuliang');
+    var add = document.getElementById('add');
+    var money = document.getElementById('money');
+    var val = shuliang.value;
+    sub.onclick = function () {
+        val--;
+        if (val < 0) {
+            shuliang.value = 0;
+            val = 0;
+        } else {
+            shuliang.value = val;
+            money.innerHTML = '商品总价：￥' + (val * 99.9).toFixed(2);
+        }
+    }
+    add.onclick = function () {
+        val++
+        if (val > 6) {
+            shuliang.value = 6;
+            val = 6;
+        } else {
+            shuliang.value = val;
+            money.innerHTML = '商品总价：￥' + (val * 99.9).toFixed(2);
+        }
+    }
+</script>
+
+</html>

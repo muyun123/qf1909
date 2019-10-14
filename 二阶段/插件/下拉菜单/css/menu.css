@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clear::after {
+    content: '';
+    width: 0;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    text-overflow: hidden;
+}
+
+ul,
+ol,
+dl {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#secon-menu .list>li {
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #777777;
+    border-left: 1px solid #777777;
+}
+
+#secon-menu .list li a {
+    display: block;
+    line-height: 34px;
+    width: 100px;
+    /* background: red; */
+}
+
+#secon-menu .list li .list2 {
+    position: absolute;
+    display: none;
+
+}
+
+#secon-menu .list li .list2 li {
+    float: none;
+}
+
+#secon-menu .list li .list2 li:hover {
+    background: #777777;
+}
+
+#secon-menu .list li .list2 a {
+    display: block;
+    line-height: 34px;
+    border: 1px solid #f5f5f5;
+    border-bottom: 0;
+    box-sizing: border-box;
+}
+
+#secon-menu .list li .list2 li:last-child a {
+    border-bottom: 1px solid #f5f5f5;
+}

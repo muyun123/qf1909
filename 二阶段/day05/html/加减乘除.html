@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num1">
+    <select name="" id="fuhao">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="cheng">*</option>
+        <option value="chu">/</option>
+    </select>
+    <input type="text" id="num2">
+    <input type="submit" id="btn" value="等于">
+    <span id="res"></span>
+</body>
+<script>
+    (
+        function () {
+            var num1 = document.getElementById('num1');
+            var fuhao = document.getElementById('fuhao');
+            var num2 = document.getElementById('num2');
+            var btn = document.getElementById('btn');
+            var res = document.getElementById('res');
+
+
+
+            function add(a, b) {
+                return (a + b);
+            }
+
+            function sub(a, b) {
+                return a - b;
+            }
+
+            function cheng(a, b) {
+                return a * b;
+            }
+
+            function chu(a, b) {
+                return a / b;
+            }
+
+            function click() {
+                var num3 = num1.value - 0;
+                var num4 = num2.value - 0
+                var fuhao1 = fuhao.value;
+                // console.log(num3, num4, fuhao1, add(num3, num4));
+                if (num3 && num4) {
+
+                    if (fuhao1 == 'add') {
+                        res.innerHTML = add(num3, num4);
+
+                    }
+                    if (fuhao1 == 'sub') {
+                        res.innerHTML = sub(num3, num4);
+
+                    }
+                    if (fuhao1 == 'cheng') {
+                        res.innerHTML = cheng(num3, num4);
+
+                    }
+                    if (fuhao1 == 'chu') {
+                        res.innerHTML = chu(num3, num4);
+
+                    }
+                }
+            }
+            btn.onclick = function () {
+                click();
+            }
+        }
+    )();
+</script>
+
+</html>

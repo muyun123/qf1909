@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    (function () {
+        //方法1
+        for (var i = 1; i < 101; i++) {
+            var str = String(i);
+            if (str.indexOf('7') >= 0 || str % 7 == 0) {
+                console.log(str);
+            }
+        }
+        //方法2
+        // var i = 1;
+        // while (i < 101) {
+        //     var str = String(i);
+        //     if (str.match(7) != null) {
+        //         console.log(str.match(7)['input']);
+        //     } else if (str % 7 == 0) {
+        //         console.log(str);
+        //     }
+        //     i++;
+        // }
+
+    })();
+</script>
+
+</html>

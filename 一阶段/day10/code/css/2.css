@@ -1,0 +1,47 @@
+table{
+    border: 1px solid blue;
+    border-spacing: 0px;
+    border-collapse:collapse;
+    
+}
+table th{
+    color: #fff;
+    background: blue;
+    
+}
+table td{
+    /* border: 1px solid blue; */
+    
+}
+table tbody tr:nth-child(2n){
+   background: pink;
+    
+}
+table tbody{
+   text-align:center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

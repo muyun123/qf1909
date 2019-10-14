@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    (function () {
+        var urldata = 'http://www.baidu.com？name=apple&price=7890&prffce=aaaaaaa';
+
+        var arr = urldata.split('？')[1];
+        var arr1 = arr.split('&');
+        var obj1 = strToArr(arr1);
+        console.log(obj1);
+
+        function strToArr(arr) {
+            var obj = {};
+            for (var i in arr) {
+                var arr2 = arr[i].split('=');
+                obj[arr2[0]] = arr2[1];
+
+            }
+            return obj;
+        }
+    })();
+</script>
+
+</html>

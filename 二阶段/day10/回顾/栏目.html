@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表数据渲染</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #goodslist {
+            padding: 20px;
+
+        }
+
+        #goodslist img {
+            width: 200px;
+            height: 200px;
+        }
+
+        #goodslist ul {
+            overflow: hidden;
+        }
+
+        #goodslist li {
+            float: left;
+            border-right: 1px dotted #ddd;
+            padding-right: 20px;
+            margin-right: 20px;
+            background: pink;
+        }
+
+        .price span {
+            color: #f00;
+        }
+
+        .price span::before {
+            content: '￥';
+        }
+    </style>
+</head>
+
+<body>
+    <h1>根据数据生成一个商品列表</h1>
+    <div id="goodslist">
+        <ul id="list">
+            <!-- <li data-guid="001">
+                <img src="img/honor7.jpg">
+                <h4>苹果</h4>
+                <p class="color">颜色：土豪金</p>
+                <p class="price">原价：<del>77</del></p>
+                <p class="price">现价：<span>77</span></p>
+            </li> -->
+        </ul>
+    </div>
+</body>
+<script>
+    (function () {
+
+        var data = [{
+                imgl: 'img/ honor7.jpg',
+                title: '苹果',
+                colors: '土豪金',
+                oldmoney: 99,
+                newmoney: 50
+            },
+            {
+                imgl: 'img / honor7.jpg',
+                title: '苹果',
+                colors: '土豪金',
+                oldmoney: 99,
+                newmoney: 50
+            },
+            {
+                imgl: 'img / honor7.jpg',
+                title: ' 苹果',
+                colors: '土豪金',
+                oldmoney: 99,
+                newmoney: 50
+            },
+        ];
+        var list = document.getElementById('list');
+        // data.forEach(function (item) {
+        var html = data.map(function (item) {
+            return `<li data-guid="001">
+                    <img src="${item.imgl}">
+                    <h4>${item.title}</h4>
+                    <p class="color">颜色：${item.colors}</p>
+                    <p class="price">原价：<del>${item.oldmoney}</del></p>
+                    <p class="price">现价：<span>${item.newmoney}</span></p>
+                 </li>`;
+        }).join('');
+        // });
+
+        list.innerHTML = html;
+    })();
+</script>
+
+</html>

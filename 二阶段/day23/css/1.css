@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+dl,
+ol {
+  list-style: none;
+}
+
+#box {
+  width: 490px;
+  margin: 20px auto;
+}
+
+#box .box1 {
+  width: 490px;
+  height: 280px;
+  position: relative;
+}
+
+#box .box1 ul {
+  width: 100%;
+  height: 100%;
+}
+
+#box .box1 ul li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#box .box1 ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#box .box1 ul li a img {
+  width: 100%;
+  height: 100%;
+}
+
+#box .box1 .boxleft {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#box .box1 .boxleft .prev {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background: url(../images/btn.gif) no-repeat;
+  background-size: 50px 100px;
+  z-index: 1001;
+  opacity: 0;
+}
+
+#box .box1 .boxright {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+#box .box1 .boxright .next {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  background: url(../images/btn.gif) no-repeat center -50px;
+  background-size: 50px 100px;
+  z-index: 1001;
+  opacity: 0;
+}
+
+#box .box1 .footerbar {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+  color: #707070;
+  background: rgba(5, 5, 5, 0.2);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#box .box1 .footerbar span {
+  margin-left: 10px;
+}
+
+#box .box1 .footerbar span:nth-child(2) {
+  float: right;
+  margin-right: 10px;
+}
+
+#box .box1 .footerbar i {
+  font-style: normal;
+}
+
+#box .box2 {
+  width: 490px;
+  height: 120px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  background: #7f7f77;
+  position: relative;
+  overflow: hidden;
+}
+
+#box .box2 ul {
+  width: 960px;
+  height: 100%;
+  position: absolute;
+}
+
+#box .box2 ul li {
+  float: left;
+  width: 150px;
+  height: 100px;
+  margin-left: 10px;
+  opacity: 0.6;
+}
+
+#box .box2 ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#box .box2 ul li a img {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,104 @@
+.rab{
+    width: 502px;
+    height: 502px;
+    background: #ccc;
+    border: 1px solid red;
+    font-size: 0;
+    position: relative;
+    text-align: center;
+}
+.rab .tou{
+    /* border: 1px solid; */
+    width: 200px;
+    height:100px;
+    background: rgb(2, 230, 21);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    margin: auto;
+    margin-top: 20px;
+}
+.rab .shenti{
+     display: inline-block;
+    /* border: 1px solid; */
+    width: 200px;
+    height:230px;
+    background: rgb(2, 230, 21);
+    border-radius: 0 0 16px 16px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+.rab .zuoshou{
+     display: inline-block;
+    /* border: 1px solid; */
+    width: 30px;
+    height:180px;
+    background: rgb(2, 230, 21);
+    border-radius: 8px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.rab .youshou{
+     display: inline-block;
+    /* border: 1px solid; */
+    width: 30px;
+    height:180px;
+    background: rgb(2, 230, 21);
+    border-radius: 8px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.rab .youjiao{
+    display: inline-block;
+    /* border: 1px solid; */
+    width: 30px;
+    height:80px;
+    background: rgb(2, 230, 21);
+    border-radius:0 0 10px 10px;
+    margin-left: 30px;
+}
+.rab .zuojiao{
+     display: inline-block;
+    /* border: 1px solid; */
+    width: 30px;
+    height:80px;
+    background: rgb(2, 230, 21);
+    border-radius:0 0 10px 10px;
+    margin-right: 30px;
+}
+.rab .eye1{
+     display: inline-block;
+    /* border: 1px solid; */
+    width: 20px;
+    height:20px;
+    background: #fff;;
+    border-radius:50%;
+    position: absolute;
+    top: 70px;
+    left: 210px;
+}
+.rab .eye2{
+     display: inline-block;
+    /* border: 1px solid; */
+    width: 20px;
+    height:20px;
+    background: #fff;;
+    border-radius:50%;
+    position: absolute;
+    top: 70px;
+    left: 270px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

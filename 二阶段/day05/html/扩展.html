@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    span {
+        margin: 0 10px;
+        background: pink;
+    }
+</style>
+
+<body>
+    计算任意 <input type="text" id="num1">和 <input type="text" id="num2"> 之间所能组成的奇数 <input type="submit" id="btn">
+    <div id="res"></div>
+</body>
+<script>
+    (
+        function () {
+            var num1 = document.getElementById('num1');
+            var num2 = document.getElementById('num2');
+            var btn = document.getElementById('btn');
+            var res = document.getElementById('res');
+
+            function click() {
+                var num3 = num1.value;
+                var num4 = num2.value;
+                var num6 = '';
+                console.log(num3.length);
+
+                if ((num3 >= 0 && num4 >= 0) && (num3.length == 1 && num4.length == 1)) {
+                    for (var i = num3; i <= num4; i++) {
+
+                        for (var j = num3; j <= num4; j++) {
+                            if (i != j) {
+                                var num5 = String(i) + String(j);
+                                if (num5 % 2 != 0) {
+                                    num6 += '<span>' + num5 + '</span>';
+                                }
+                            }
+
+                        }
+                    }
+                    res.innerHTML = num6;
+                } else {
+                    alert('数字必须是个位数');
+                }
+            }
+
+            btn.onclick = function () {
+                click();
+            }
+        }
+
+    )();
+</script>
+
+</html>

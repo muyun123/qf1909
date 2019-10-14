@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>用户注册</title>
+    <style type="text/css">
+        body {
+            background-color: rgb(177, 208, 224);
+            font: normal 12px Trebuchet MS;
+            color: #000;
+        }
+
+        .roundedCorners {
+            width: 520px;
+            padding: 10px;
+            background-color: #DDEEF6;
+            box-shadow: 0px 0px 10px 0px #888888;
+            border: 1px solid #DDEEF6;
+            border-radius: 6px;
+            margin: auto;
+        }
+
+        .roundedCorners-textbox {
+            border: 1px solid #999;
+            width: 250px;
+        }
+
+        .checkbox {
+            margin-left: 30px;
+            border: 1px solid #999;
+            width: 20px;
+        }
+
+        .label {
+            display: inline-block;
+            width: 50px;
+            text-align: center;
+        }
+
+        .default {
+            color: grey;
+            font-size: 12px;
+        }
+
+        .input {
+            color: grey;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myform" action="05success.html" method="get">
+        <div class="roundedCorners">
+            <label class="label">账号</label>
+            <input id="username" name="username" type="text" placeholder="用户名不得使用特殊字符，长度在6-20之间"
+                class="default roundedCorners-textbox" /><span></span><br /><br />
+            <label class="label">昵称</label>
+            <input id="nickname" name="nickname" type="text" class="roundedCorners-textbox" /><span></span><br /><br />
+            <label class="label">电子邮件</label>
+            <input id="email" name="email" type="text" class="roundedCorners-textbox" /><span></span><br /><br />
+            <label class="label">身份证</label>
+            <input id="identity" name="identity" type="text" class="roundedCorners-textbox" /><span></span><br /><br />
+            <label class="label">手机号码</label>
+            <input id="phone" name="phone" type="text" class="roundedCorners-textbox" /><span></span><br /><br />
+            <!-- <label class="label">生日</label>
+            <input id="birthday" name="birthday" type="text" class="roundedCorners-textbox" /><br /><br /> -->
+            <label class="label">密码</label>
+            <input id="password" name="password" type="password"
+                class="roundedCorners-textbox" /><span></span><br /><br />
+            <label class="label">确认密码</label>
+            <input id="confirm_pwd" name="confirm_pwd" type="text"
+                class="roundedCorners-textbox" /><span></span><br /><br />
+            <input type="checkbox" class="checkbox" />
+            <label>10天内免登陆</label>
+            <br /><br />
+            <input type="submit" id="btnCheck" value="确定" />
+            <input type="reset" value="清空" />
+        </div>
+    </form>
+</body>
+<script>
+    (function () {
+        var username = document.getElementById('username'); //账号
+        var nickname = document.getElementById('nickname'); //昵称
+        var email = document.getElementById('email'); //电子邮件
+        var identity = document.getElementById('identity'); //身份证
+        var phone = document.getElementById('phone'); //手机号码
+        // var birthday = document.getElementById('birthday'); //生日
+        var password = document.getElementById('password'); //密码
+        var confirmpwd = document.getElementById('confirm_pwd'); //确认密码
+        var myform = document.getElementById('myform');
+        var spp = myform.getElementsByTagName('span');
+
+        // // 账号
+        // regular({
+        //     ele: username,
+        //     school: spp[0],
+        //     reg: /^[0-9a-zA-Z]{6,20}$/,
+        //     regyes: '正确',
+        //     regno: '不通过',
+        // });
+
+        // function regular(opt) {
+        //     opt.ele.onblur = function () {
+        //         var num = opt.ele.value.trim();
+        //         console.log(num);
+        //         if (num) {
+        //             var isok = opt['reg'].test(num);
+        //             if (isok) {
+        //                 opt.school.innerHTML = opt.regyes;
+        //                 opt.school.style.color = '#58bc58';
+        //             } else {
+        //                 opt.school.innerHTML = opt.regno;
+        //                 opt.school.style.color = 'red';
+        //             }
+        //         } else {
+        //             alert('请输入');
+        //         }
+        //     }
+        // }
+        // 账号
+        username.onblur = function () {
+            // var num = this.value;
+            // if (num.trim()) {
+            //     var reg = /^[0-9a-zA-Z]{6,20}$/;
+            //     var isok = reg.test(num);
+            //     if (isok) {
+            //         spp.innerHTML = '正确';
+            //         spp.style.color = '#58bc58';
+            //     } else {
+            //         spp.innerHTML = '不通过';
+            //         spp.style.color = 'red';
+            //     }
+            // }
+            regula({
+                reg: /^[0-9a-zA-Z]{6,20}$/,
+                school: spp[0],
+                ele: this.value,
+                regyes: '正确',
+                regno: '不通过',
+                yescolor: '#58bc58',
+                nocolor: 'red'
+            });
+        }
+        //昵称
+        nickname.onblur = function () {
+            regula({
+                reg: /^[\Wa-zA-Z0-9]+$/,
+                school: spp[1],
+                ele: this.value,
+                regyes: '正确',
+                regno: '不通过',
+                yescolor: '#58bc58',
+                nocolor: 'red'
+            });
+        }
+        //电子邮箱
+        email.onblur = function () {
+            regula({
+                reg: /^\w+@\w+.[a-zA-Z]+$/,
+                school: spp[2],
+                ele: this.value,
+                regyes: '正确',
+                regno: '不通过',
+                yescolor: '#58bc58',
+                nocolor: 'red'
+            });
+        }
+        //身份证
+        identity.onblur = function () {
+            regula({
+                reg: /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/,
+                ele: this.value,
+                school: spp[3],
+                regyes: '正确',
+                regno: '不通过',
+                yescolor: '#58bc58',
+                nocolor: 'red'
+            });
+        }
+        //手机号码
+        phone.onblur = function () {
+            regula({
+                reg: /^1[3-9]\d{9}$/,
+                ele: this.value,
+                school: spp[4],
+                regyes: '正确',
+                regno: '不通过',
+                yescolor: '#58bc58',
+                nocolor: 'red'
+            });
+        }
+        confirmpwd
+        //密码
+        password.onblur = function () {
+            regula({
+                reg: /^[\w@!#$%^&*,./;:]{6,20}$/,
+                school: spp[5],
+                ele: this.value,
+                regyes: '正确',
+                regno: '不通过',
+                yescolor: '#58bc58',
+                nocolor: 'red'
+            });
+        }
+        //确认密码
+        confirmpwd.onblur = function () {
+            var num = password.value;
+            if (this.value == num) {
+                spp[6].innerHTML = '正确';
+                spp[6].style.color = '#58bc58';
+            } else {
+                spp[6].innerHTML = '不通过';
+                spp[6].style.color = 'red';
+            }
+
+        }
+        // 生日
+        // birthday.onblur = function () {
+        //     regula({
+        //         reg: /^((19[7-9][0-9])|(20[0-1][0-9])).((0[1-9])|(1[0-2])).((0[1-9])|([1-2][0-9])|(3[0-1]))$/,
+        //         ele: this.value,
+        //         regyes: '正确',
+        //         regno: '不通过',
+        //         yescolor: '#58bc58',
+        //         nocolor: 'red'
+        //     });
+        // }
+
+
+
+        function regula(opt) {
+            if (opt.ele.trim()) {
+                var isok = opt['reg'].test(opt.ele);
+                if (isok) {
+                    opt.school.innerHTML = opt.regyes;
+                    opt.school.style.color = opt.yescolor;
+                } else {
+                    opt.school.innerHTML = opt.regno;
+                    opt.school.style.color = opt.nocolor;
+                }
+            }
+        }
+    })();
+</script>
+
+</html>

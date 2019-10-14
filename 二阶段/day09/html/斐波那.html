@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num"><input type="submit" id="btn"><span id="res"></span>
+</body>
+<script>
+    (function () {
+        var num = document.getElementById('num');
+        var btn = document.getElementById('btn');
+        var res = document.getElementById('res');
+        var arr = [];
+        btn.onclick = function () {
+            var num1 = num.value;
+            for (var i = 0; i < num1; i++) {
+                arr[i] = fac(i + 1);
+            }
+            console.log(arr);
+            var html = arr.map(function (item) {
+                return `${item}`;
+            }).join(',');
+            res.innerHTML = html;
+        }
+
+        function fac(n) {
+            if (n <= 2) {
+                return 1;
+            }
+            return fac(n - 1) + fac(n - 2);
+        }
+
+
+
+
+
+
+
+    })();
+</script>
+
+</html>

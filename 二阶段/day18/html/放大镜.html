@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <div class="wrap" id="wrap">
+        <div class="biger">
+            <img src="" alt="">
+        </div>
+        <div class="imgs">
+            <div class="main">
+                <img src="" alt="">
+                <div class="mask" id="mask"></div>
+            </div>
+            <div class="bottom">
+                <p class="prev">&lt;</p>
+                <div class="box">
+                    <ul class="smaller clear">
+                        <!-- <li><img src="../images/0.jpg" alt=""></li> -->
+                    </ul>
+                </div>
+                <p class="next">&gt;</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    (function () {
+        var arr = ['../images/0.jpg', '../images/1.jpg', '../images/3.jpg', '../images/4.jpg', '../images/5.jpg',
+            '../images/6.jpg', '../images/7.jpg', '../images/8.jpg'
+        ]
+        var smaller = document.getElementsByClassName('smaller')[0];
+        var biger = document.getElementsByClassName('biger')[0];
+        var main = document.getElementsByClassName('main')[0];
+        var mask = document.getElementsByClassName('mask')[0];
+        var wrap = document.getElementsByClassName('wrap')[0];
+        var prev = document.getElementsByClassName('prev')[0];
+        var next = document.getElementsByClassName('next')[0];
+        var box = document.getElementsByClassName('box')[0];
+        var html = '';
+        html += arr.map(function (item) {
+            return `<li><img src="${item}" alt=""></li>`;
+        }).join('');
+        smaller.innerHTML = html;
+        main.children[0].src = smaller.children[0].children[0].src;
+        biger.children[0].src = smaller.children[0].children[0].src;
+        smaller.children[0].className = 'active';
+        //鼠标移入
+        main.onmousemove = function (ev) {
+            mask.style.display = 'block';
+            biger.style.display = 'block';
+            var idsl = ev.pageX - mask.offsetWidth / 2 - wrap.offsetLeft;
+            var idst = ev.pageY - mask.offsetHeight / 2 - wrap.offsetTop;
+            if (idsl >= wrap.offsetWidth - mask.offsetWidth) {
+                idsl = wrap.offsetWidth - mask.offsetWidth;
+            } else if (idsl <= 0) {
+                idsl = 0;
+            }
+            if (idst >= main.offsetHeight - mask.offsetHeight) {
+                idst = main.offsetHeight - mask.offsetHeight;
+            } else if (idst <= 0) {
+                idst = 0;
+            }
+            mask.style.left = idsl + 'px';
+            mask.style.top = idst + 'px';
+            //放大
+            var xishul = idsl / (wrap.offsetWidth - mask.offsetWidth);
+            var xishut = idst / (main.offsetHeight - mask.offsetHeight);
+            var limitl = biger.children[0].offsetWidth - biger.offsetWidth;
+            var limitt = biger.children[0].offsetHeight - biger.offsetHeight;
+            biger.children[0].style.left = -xishul * limitl + 'px';
+            biger.children[0].style.top = -xishut * limitt + 'px';
+        }
+        //鼠标移出
+        main.onmouseout = function () {
+            mask.style.display = 'none';
+            biger.style.display = 'none';
+        }
+        //小图切大图
+        var smallerli = smaller.children;
+        for (var i = 0; i < smallerli.length; i++) {
+            smallerli[i].onclick = function (ev) {
+                for (var i = 0; i < smallerli.length; i++) {
+                    smallerli[i].className = '';
+                }
+                main.children[0].src = this.children[0].src;
+                biger.children[0].src = this.children[0].src;
+                this.className = 'active';
+            }
+        }
+        //图片滚动事件 
+        var num1 = 0;
+        var disl = box.offsetWidth - smaller.offsetWidth;
+        prev.onclick = function () {
+            num1 += 20;
+            if (num1 >= 0) {
+                num1 = 0;
+            }
+            moveing(num1);
+            console.log(num1);
+        }
+
+        next.onclick = function () {
+            num1 -= 20;
+            if (num1 <= disl) {
+                num1 = disl;
+            }
+            moveing(num1);
+            console.log(num1);
+        }
+
+        function moveing(a) {
+            if (a >= 0) {
+                css(prev, 'background', '#ccc');
+                css(prev, 'cursor', 'no-drop');
+                css(smaller, 'left', a + 'px');
+            } else if (a < 0 && a > disl) {
+                css(smaller, 'left', a + 'px');
+                css(prev, 'background', '#777');
+                css(prev, 'cursor', 'pointer');
+                css(next, 'background', '#777');
+                css(next, 'cursor', 'pointer');
+            } else if (a <= disl) {
+                css(smaller, 'left', a + 'px');
+                css(next, 'background', '#ccc');
+                css(next, 'cursor', 'no-drop');
+            }
+        }
+
+        function css() {
+            if (arguments.length == 2) {
+                if (getComputedStyle(arguments[0], false)) {
+                    return getComputedStyle(arguments[0], false)[arguments[1]];
+                } else {
+                    return arguments[0].currentStyle[arguments[1]];
+                }
+            } else if (arguments.length == 3) {
+                arguments[0].style[arguments[1]] = arguments[2];
+            }
+        }
+    })();
+</script>
+
+</html>

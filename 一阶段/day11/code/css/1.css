@@ -1,0 +1,114 @@
+
+body{
+    background: #ccc
+}
+.lianxi1{
+    width:900px;
+    /* background: #ccc; */
+    margin: auto;
+    font-family: Geneva,Arial,Helvetica,sans-serif; 
+    border: 5px solid #fff;
+}
+.lianxi1 header{
+    width:100%;
+    background: #F47D31 ;
+    height: 80px;
+    text-align: center;
+    font-size: 72px;
+    color: #fff
+}
+.lianxi1 nav{
+    display: inline-block;
+    width: 25%;
+    /* background: red; */
+    font-size: 24px;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.lianxi1 nav h3{
+   text-align: center;
+   color: #fff;
+}
+
+.lianxi1 nav ul li{
+    height: 43px;
+    line-height: 43px;
+    border-bottom: 3px solid #fff;
+  
+    color: #F47D31;
+}
+.lianxi1 .zhong{
+    float: left;
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+}
+.lianxi1 .zhong article{
+    background: #EEEEEE;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.lianxi1 .zhong h2{
+    font-size: 24px;
+    text-align: center;
+    background: #F47D31;
+    color: #fff;
+    line-height: 31px;
+}
+.lianxi1 .zhong section{
+font-size: 18PX;
+padding: 10px 0;
+}
+.lianxi1 .zhong h3{
+font-size: 18px;
+    text-align: center;
+    background: #F47D31;
+    color: #fff;
+    line-height: 26px;
+}
+.lianxi1 aside{
+    float: left;
+    display: inline-block;
+    width: 24%;
+    font-style: italic; 
+    font-size: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.lianxi1 aside h2{
+   
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+.lianxi1 aside h3{
+    font-size: 18px;
+    /* text-align: center; */
+    color: #fff; 
+    margin-top: 20px;
+}
+.clear{
+    clear: both;
+}
+.lianxi1 footer{
+    /* display: block; */
+    /* float: left; */
+    font-size: 18px;
+    background: #F47D31;
+    color: #fff;
+    text-align: center;
+    line-height: 46px;
+}
+
+
+
+
+
+
+
+
+
+

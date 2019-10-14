@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/secode.css">
+</head>
+
+<body>
+    <div id="secode">
+        <input type="text" id="num1">
+        <div class="box1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <input type="submit" id="btn" value="刷新验证码"><span id="res"></span>
+    </div>
+
+
+</body>
+<script src="./js/secode.js"></script>
+<script>
+    (function () {
+        secode({
+            ele: 'secode',
+        });
+    })();
+</script>
+
+</html>

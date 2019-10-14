@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 1200px;
+  /* height: 2000px; */
+
+}
+
+ol,
+ul,
+dl {
+  list-style: none;
+}
+
+.clear::after {
+  content: '';
+  overflow: hidden;
+  width: 0;
+  clear: both;
+  ;
+  text-overflow: hidden;
+  display: block;
+}
+
+#goodscar {
+  width: 100%;
+  height: 100%;
+}
+
+#goodscar .content {
+  width: 990px;
+  margin: auto;
+}
+
+#goodscar .content .goodscar_tit {
+  width: 100%;
+  /* background: pink; */
+  font-size: 12px;
+}
+
+#goodscar .content .goodscar_tit .checkboxall {
+  padding-left: 15px;
+  margin-right: 76px;
+  vertical-align: middle;
+}
+
+#goodscar .content .goodscar_tit .checkboxall input {
+  vertical-align: middle;
+  margin-top: 1px;
+
+}
+
+#goodscar .content .goodscar_tit .checkboxall span {
+  vertical-align: middle;
+}
+
+#goodscar .content .goodscar_tit div {
+  float: left;
+}
+
+#goodscar .content .goodscar_tit .goods_mess {
+  vertical-align: middle;
+  margin-right: 366px;
+  margin-top: 1px;
+}
+
+#goodscar .content .goodscar_tit .goods_oneprice {
+  vertical-align: middle;
+  margin-right: 97px;
+  margin-top: 1px;
+}
+
+#goodscar .content .goodscar_tit .goods_num {
+  vertical-align: middle;
+  margin-right: 87px;
+  margin-top: 1px;
+}
+
+#goodscar .content .goodscar_tit .goods_sumprice {
+  vertical-align: middle;
+  margin-right: 97px;
+  margin-top: 1px;
+}
+
+#goodscar .content .goods_buying .dlist {
+  font-size: 12px;
+
+}
+
+#goodscar .content .goods_buying .dlist dd {
+  margin-top: 27px;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop div {
+  float: left;
+  line-height: 25px;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop .selectbox {
+  margin-left: 15px;
+  margin-right: 9px;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop .tianmao img {
+  margin-top: 4px;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop .selectbox input {
+  margin-top: 1px;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop .shop {
+  margin-left: 7px;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop .shop a {
+  color: #000;
+  text-decoration: none;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop .shop a:hover {
+  color: #ff6700;
+  text-decoration: underline;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop .kefu {
+  margin-left: 20px;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop .kefu img {
+  margin-top: 4px;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop .youhui {
+  margin-left: 10px;
+  position: relative;
+  display: none;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop .youhui i {
+  width: 0;
+  height: 0;
+  border: 13px solid transparent;
+  border-left: 6px solid transparent;
+  border-left-color: #ff6700;
+  position: absolute;
+}
+
+#goodscar .content .goods_buying .dlist dd .selebuy_shop .youhui a {
+  color: #ff6700;
+  text-decoration: none;
+  display: inline-block;
+  width: 66px;
+  line-height: 23px;
+  border: 1px dashed #ff6700;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods {
+  width: 990px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods .ulist {
+  width: 100%;
+
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li {
+  width: 988px;
+  height: 131px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f5f5f5;
+  background: #FCFCFC;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li div {
+  float: left;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .sele_checkbox {
+  margin-right: 12px;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodsmessage {
+  margin-right: 38px;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodsmessage img {
+  width: 82px;
+  height: 82px;
+  margin-right: 10px;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodsmessage .goods_text {
+  width: 150px;
+  line-height: 18px;
+  height: 36px;
+  overflow: hidden;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goods_type {
+  position: relative;
+  top: -20px;
+  width: 172px;
+  height: 118px;
+  border: 1px dashed transparent;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #ccc;
+  line-height: 18px;
+  margin-right: 40px;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li:hover .goods_type {
+  background: #fff;
+  border: 1px dashed #ff6700;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .oneprice {
+  width: 114px;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .oneprice span:first-child {
+  color: rgb(179, 179, 179);
+  text-decoration: line-through;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodsnum {
+  width: 77px;
+  border: 1px solid rgb(248, 227, 214);
+  background: #FFF0E7;
+  box-sizing: border-box;
+  font-size: 0;
+  margin-right: 43px;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodsnum input[type="button"] {
+  width: 17px;
+  height: 23px;
+  background: transparent;
+  border: 0;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodsnum input[type="text"] {
+  width: 39px;
+  height: 23px;
+  background: transparent;
+  border: 1px solid pink;
+  background: #fff;
+  text-align: center;
+
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodsnum p {
+  font-size: 12px;
+  border-top: 1px solid rgb(255, 222, 228);
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  color: #ff6700;
+  display: inline-block;
+  line-height: 28px;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodsnum span {
+  font-size: 12px;
+  border-top: 1px solid rgb(255, 222, 228);
+  text-align: center;
+  display: inline-block;
+  color: #ff6700;
+  display: inline-block;
+  line-height: 28px;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodssumprice {
+  width: 130px;
+  color: #ff6700;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodssumprice strong {
+  color: #ff6700;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodshand span {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#goodscar .content .goods_buying .dlist dd .shop_selegoods li .goodshand span:hover {
+  color: #ff6700;
+  text-decoration: underline;
+}
+
+#goodscar .content .goods_jiesuan {
+  width: 100%;
+  height: 49px;
+  background: #E5E5E5;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+#goodscar .content .goods_jiesuan .selec_delet {
+  float: left;
+}
+
+#goodscar .content .goods_jiesuan .selec_delet div {
+  float: left;
+  line-height: 49px;
+}
+
+#goodscar .content .goods_jiesuan .selec_delet .quanxuan {
+  margin-right: 5px;
+}
+
+#goodscar .content .goods_jiesuan .selec_delet .quanxuan input {
+  margin-top: 2px;
+}
+
+#goodscar .content .goods_jiesuan .selec_delet .goods_delet span {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#goodscar .content .goods_jiesuan .selec_delet .goods_delet span:hover {
+  color: #ff6700;
+  text-decoration: underline;
+}
+
+#goodscar .content .goods_jiesuan .sumgoods_give {
+  float: right;
+}
+
+#goodscar .content .goods_jiesuan .sumgoods_give div {
+  float: left;
+  line-height: 49px;
+}
+
+#goodscar .content .goods_jiesuan .sumgoods_give .selected_num {
+  width: 129px;
+}
+
+#goodscar .content .goods_jiesuan .sumgoods_give .selected_num strong {
+  color: #ff6700;
+}
+
+#goodscar .content .goods_jiesuan .sumgoods_give .goods_heji span {
+  padding: 0 6px;
+}
+
+#goodscar .content .goods_jiesuan .sumgoods_give .goods_heji strong {
+  color: #ff6700;
+}
+
+#goodscar .content .goods_jiesuan .sumgoods_give .sum_jiesuan a {
+  display: inline-block;
+  width: 120px;
+  line-height: 49px;
+  text-align: center;
+  background: #ff6700;
+  color: #fff;
+  margin-left: 3px;
+  text-decoration: none;
+}
+
+#goodscar .content .goods_jiesuan .sumgoods_give .sum_jiesuan a:hover {
+  background: #ce5301;
+}
+
+#goodscar .content .goods_jiesuan .sumgoods_give .sum_jiesuan .activ {
+  background: #ccc;
+  cursor: no-drop;
+}
+
+#goodscar .content .goods_jiesuan .sumgoods_give .sum_jiesuan .activ:hover {
+  background: #ccc;
+}

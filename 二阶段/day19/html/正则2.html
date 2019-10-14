@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            background-color: rgb(177, 208, 224);
+            font: normal 12px Trebuchet MS;
+            color: #000;
+        }
+
+        .roundedCorners {
+            width: 520px;
+            padding: 10px;
+            background-color: #DDEEF6;
+            box-shadow: 0px 0px 10px 0px #888888;
+            border: 1px solid #DDEEF6;
+            border-radius: 6px;
+            margin: auto;
+        }
+
+        .roundedCorners-textbox {
+            border: 1px solid #999;
+            width: 250px;
+        }
+
+        .checkbox {
+            margin-left: 30px;
+            border: 1px solid #999;
+            width: 20px;
+        }
+
+        .label {
+            display: inline-block;
+            width: 50px;
+            text-align: center;
+        }
+
+        .default {
+            color: grey;
+            font-size: 12px;
+        }
+
+        .input {
+            color: grey;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myform" action="05success.html" method="get">
+        <div class="roundedCorners">
+            <label class="label">网址</label>
+            <input id="urll" name="username" type="text" placeholder="用户名不得使用特殊字符，长度在6-20之间"
+                class="default roundedCorners-textbox" /><span class="school"></span><br /><br />
+            <label class="label">日期</label>
+            <input id="days" name="nickname" type="text" class="roundedCorners-textbox" /><span
+                class="school"></span><br /><br />
+            <label class="label">电子邮件</label>
+            <input id="email" name="email" type="text" class="roundedCorners-textbox" /><span
+                class="school"></span><br /><br />
+            <label class="label">身份证</label>
+            <input id="identity" name="identity" type="text" class="roundedCorners-textbox" /><span
+                class="school"></span><br /><br />
+            <label class="label">手机号码</label>
+            <input id="phone" name="phone" type="text" class="roundedCorners-textbox" /><span
+                class="school"></span><br /><br />
+            <label class="label">密码</label>
+            <input id="password" name="password" type="password" class="roundedCorners-textbox" /><span
+                class="school"></span><br /><br />
+            <label class="label">中文</label>
+            <input id="chinese" name="confirm_pwd" type="text" class="roundedCorners-textbox" /><span
+                class="school"></span><br /><br />
+        </div>
+    </form>
+</body>
+<script>
+    var urll = document.getElementById('urll'); //网址
+    var days = document.getElementById('days'); //日期
+    var email = document.getElementById('email'); //电子邮件
+    var identity = document.getElementById('identity'); //身份证
+    var phone = document.getElementById('phone'); //手机号码
+    var password = document.getElementById('password'); //密码
+    var chinese = document.getElementById('confirm_pwd'); //中文
+    var school = document.getElementsByClassName('school');
+    //https://www.5566.net/
+    var checkReg = {
+        url: function (str) {
+            var reg = /^(https:\/\/)?(www.)?[a-zA-Z0-9]+.\w+$/;
+            return reg.test(str);
+        },
+        days: function (str) {
+            var reg = /^(\d{4})(\-)(\d{2})(\-)(\d{2})$/;
+            return reg.test(str);
+        },
+        email: function (str) {
+            var reg = /^[\w#$!\-]+@[\w#$!\-]+\.[a-zA-Z]+$/;
+            return reg.test(str);
+        },
+        identity: function (str) {
+            var reg =
+                /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+            return reg.test(str);
+        },
+        phone: function (str) {
+            var reg = /^1[3-9]\b{9}$/;
+            return reg.test(str);
+        },
+        password: function (str) {
+            var reg = /^[\w!@#~$%^&*,./]{6,20}}$/;
+            return reg.test(str);
+        },
+        chinese: function (str) {
+            var reg = /^[\u4e00-\u9fa5]+$/;
+            return reg.test(str);
+        }
+    };
+    console.log(checkReg.url('www.baidu.com'));
+    console.log(checkReg.days('2019-12-09'));
+    console.log(checkReg.email('22ss334@www.com'));
+    console.log(checkReg.chinese('你的'));
+    //--------------------------------------------
+    // function checkReg1(type){
+    //   if(type){
+    //  }
+    //     function regtest(reg){
+    //         var isok=reg.test();
+    //     }
+    // }
+</script>
+
+</html>

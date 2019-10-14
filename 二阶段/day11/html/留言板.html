@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 714px;
+            height: 527px;
+            border: 1px solid red;
+            /* background: pink; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 78px;
+            text-align: center;
+        }
+
+        .content {
+            width: 624px;
+            height: 227px;
+            ;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin: auto;
+            background: #fff;
+            border: 2px solid #ccc;
+        }
+
+        .content h2 {
+            text-align: left;
+            font-size: 17px;
+            line-height: 42px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        ul {
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        ul li {
+            width: 100%;
+            overflow: hidden;
+            list-style: none;
+            font-size: 14px;
+            line-height: 32px;
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .sear {
+            width: 600px;
+            margin: auto;
+            margin-top: 100px;
+            font-size: 0;
+        }
+
+        input[type='text'] {
+            height: 50px;
+            width: 480px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+        }
+
+        input[type='submit'] {
+            height: 50px;
+            width: 120px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h2>显示5条最新消息</h2>
+        <div class="content">
+            <h2>最新消息</h2>
+            <ul id="list">
+                <!-- <li>小明由于又调戏女老师又一次被滚粗教室</li>
+                <li>小明由于又调戏女老师又一次被滚粗教室</li>
+                <li>小明由于又调戏女老师又一次被滚粗教室</li>
+                <li>小明由于又调戏女老师又一次被滚粗教室</li>
+                <li>小明由于又调戏女老师又一次被滚粗教室</li> -->
+            </ul>
+        </div>
+        <div class="sear">
+            <input type="text" id="num">
+            <input type="submit" id="btn">
+        </div>
+    </div>
+</body>
+<script>
+    (function () {
+        var btn = document.getElementById('btn');
+        var num = document.getElementById('num');
+        var list = document.getElementById('list');
+        var arr = ['小明由于又调戏女老师又一次被滚粗教室',
+            '小明由于又调戏女老师又一次被滚粗教室',
+            '小明由于又调戏女老师又一次被滚粗教室',
+            '小明由于又调戏女老师又一次被滚粗教室'
+        ];
+        xuanran(arr);
+        btn.onclick = function () {
+            if (num.value) {
+                if (arr.length == 5) {
+                    arr.pop();
+                }
+
+                arr.unshift(guolv(num.value));
+                xuanran(arr);
+            } else {
+                alert('不能为空');
+            }
+        }
+
+        function xuanran(a) {
+            var html = a.map(function (item) {
+                return `<li>${item}</li>`;
+            }).join('');
+            console.log(html);
+            list.innerHTML = html;
+        }
+
+        function guolv(str) {
+            var arr = ['艹', '妈', '逼', 'fuck', '草', '操'];
+            arr.forEach(function (item) {
+                var reg = new RegExp(item, 'gi');
+                str = str.replace(reg, '***');
+            })
+            return str;
+        }
+
+    })();
+</script>
+
+</html>

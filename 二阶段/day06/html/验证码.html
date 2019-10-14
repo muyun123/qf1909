@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+
+        }
+
+        span {
+            line-height: 50px;
+            margin: 0;
+            display: inline-block;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <input type="submit" id="btn" value="刷新验证码"><br>
+    <input type="text" id="num1"><span id="res"></span>
+</body>
+<script>
+    (
+        function () {
+            var box = box1.getElementsByTagName('span');
+            var btn = document.getElementById('btn');
+            var box2 = document.getElementById('box1');
+            var res = document.getElementById('res');
+            var input1 = document.getElementById('num1');
+
+
+            function mouseclick() {
+                var str = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890';
+                var numb2 = '';
+                for (var i = 0; i < 4; i++) {
+                    var num = parseInt(Math.random() * str.length);
+                    var num1 = str[num];
+                    box[i].innerHTML = num1;
+                    numb2 += num1;
+                }
+                var str1 = '0123456789abcdef';
+                var num3 = '';
+                for (var j = 0; j < 6; j++) {
+                    var num2 = parseInt(Math.random() * str1.length);
+                    num3 += str1[num2];
+                }
+                box2.style = 'background:linear-gradient(45deg,#' + num3 + ' ,rgba(214,64,132,0.3))';
+
+                for (var i = 0; i < 4; i++) {
+                    var deg1 = Math.random() * 100;
+                    var deg2 = Math.random() > Math.random() ? '+' : '-';
+                    box[i].style = 'font-size:' + Math.random() / 3 * 100 +
+                        'px;transform-style: preserve-3d; transform: rotateZ(' + deg2 + deg1 +
+                        'deg); perspective:99 px';
+                }
+                return numb2;
+            }
+
+            btn.onclick = function () {
+                mouseclick();
+
+            }
+            var numbb = mouseclick();
+            input1.oninput = function () {
+                var numb = this.value;
+                if (numb == numbb) {
+                    res.innerHTML = '验证码正确';
+                } else {
+                    res.innerHTML = '验证码错误';
+                }
+
+            }
+        }
+    )();
+</script>
+
+</html>

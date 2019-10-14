@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .clear::after {
+        content: '';
+        width: 0;
+        overflow: hidden;
+        clear: both;
+        display: block;
+        visibility: hidden;
+    }
+
+    #easybox {
+        width: 300px;
+        height: 200px;
+        background: #000;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .box1 {
+        margin-top: 100px;
+        width: 300px;
+        height: 40px;
+        background: #ccc;
+    }
+
+
+
+    .box3 {
+        width: 0;
+        height: 40px;
+        background: green;
+        /* overflow: hidden; */
+    }
+
+    .box2 {
+        width: 40px;
+        height: 40px;
+        background: #FFF;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    .box4 {
+        background: #f5f5f5;
+        width: 50px;
+        height: 30px;
+        margin: auto;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div id="easybox">
+        <div class="box1">
+            <div class="box3">
+                <div class="box2"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="box4">重置</div>
+</body>
+<script>
+    (function () {
+        var easybox = document.getElementById('easybox');
+        var box1 = document.getElementsByClassName('box1')[0];
+        var box2 = document.querySelector('.box2');
+        var box3 = document.getElementsByClassName('box3')[0];
+        var box4 = document.getElementsByClassName('box4')[0];
+        box4.onclick = function () {
+            itop = box2.offsetTop;
+            ileft = box1.offsetLeft;
+            box2.style.left = ileft + 'px';
+            box2.style.top = itop + 'px';
+            box3.style.width = ileft - box1.offsetLeft + 'px';
+            box2.style.background = '#fff';
+            tuoz();
+        }
+        tuoz();
+
+        function tuoz() {
+            box2.onmousedown = function (ev) {
+                var irel = ev.offsetX;
+                var iret = ev.offsetY;
+                var itop = box2.offsetTop;
+                document.onmousemove = function (ev) {
+                    var ileft = ev.pageX - irel;
+                    if (ileft >= box1.offsetLeft + 260) {
+                        ileft = box1.offsetLeft + 260;
+                    } else if (ileft <= box1.offsetLeft) {
+                        ileft = box1.offsetLeft;
+                    }
+                    box2.style.left = ileft + 'px';
+                    box2.style.top = itop + 'px';
+                    box3.style.width = ileft - box1.offsetLeft + 'px';
+                }
+                document.onmouseup = function (ev) {
+                    document.onmousemove = null;
+                    ileft = ev.pageX - irel;
+                    if (ileft >= box1.offsetLeft + 260) {
+                        itop = box2.offsetTop;
+                        ileft = box1.offsetLeft + 260;
+                        box2.style.background = 'red';
+                        box2.onmousedown = null;
+                        document.onmouseup = null;
+                    } else {
+                        itop = box2.offsetTop;
+                        ileft = box1.offsetLeft;
+                        box2.style.background = '#fff';
+                    }
+                    box2.style.left = ileft + 'px';
+                    box2.style.top = itop + 'px';
+                    box3.style.width = ileft - box1.offsetLeft + 'px';
+                }
+
+            }
+        }
+    })();
+</script>
+
+</html>

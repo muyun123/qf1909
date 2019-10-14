@@ -1,0 +1,580 @@
+#chaofan{
+    width: 100%;
+    height: 5302px;
+    background: #fff;
+}
+#chaofan .conten{
+    width: 1140px;
+    height: 100%;
+    /* background: greenyellow; */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*header star  */
+
+#chaofan .header .conten {
+    width: 1140px;
+    height: 83px;
+    background: url(../images/images/logo.png) no-repeat 0 center;
+}
+#chaofan .header .conten ul{
+    width: 700px;
+    height: 83px;
+    float: right;
+}
+#chaofan .header .conten ul li{
+    height: 83px;
+    float: left;
+    font-size: 12px;
+    line-height: 83px;
+    width: 89px;
+    text-align: center;
+}
+#chaofan .header .conten ul li a{
+   display: inline-block;
+    padding: 0 31px;
+    
+    color: black;
+    /* width: 89px; */
+}
+#chaofan .header .conten ul li .a2{
+   display: none;
+    padding: 0 31px;
+    color: black;
+}
+#chaofan .header .conten ul li:hover .a1{
+   display: none;
+}
+#chaofan .header .conten ul li:hover .a2{
+   display: block;
+}
+
+/* banner star */
+#chaofan .banner{
+    width: 100%;
+    height: 448px;
+    background: url(../images/images/56f3527bb57ce.jpg) no-repeat center center;
+}
+
+/* main1 star */
+#chaofan .main1{
+    height: 726px;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+
+}
+
+#chaofan .main-tit div{
+    display: inline-block;
+    margin-top: 42px;
+    height:  44px;
+    width:242px;
+    /* background: url(../images/images/bus_h2.jpg) no-repeat; */
+}
+#chaofan .main1 .main-tit div{
+    background: url(../images/images/bus_h2.jpg) no-repeat;
+}
+#chaofan .main-tit p{
+    margin-top: 23px;
+   white-space: pre-line;
+   line-height: 24px;
+   color: #727272;
+}
+#chaofan .main1 .main1-2 ul{
+   height: 440px;
+   width: 100%;
+   margin-top: 52px;
+   
+}
+#chaofan .main1 .main1-2 ul li{
+   height:218px;
+   width: 351px;
+   text-align: center;
+   line-height: 218px;
+   float: left;
+   margin-right: 43px;
+   margin-bottom: 4px;
+   position: relative;
+}
+#chaofan .main1 .main1-2 ul .li1{
+   background: url(../images/images/bus_tu4.jpg) no-repeat;
+}
+#chaofan .main1 .main1-2 ul .li2{
+   background: url(../images/images/bus_tu1.jpg) no-repeat;
+}
+#chaofan .main1 .main1-2 ul .li3{
+   background: url(../images/images/bus_tu2.jpg) no-repeat;
+}
+#chaofan .main1 .main1-2 ul .li4{
+   background: url(../images/images/bus_tu3.jpg) no-repeat;
+}
+#chaofan .main1 .main1-2 ul .li5{
+   background: url(../images/images/bus_tu5.jpg) no-repeat;
+}
+#chaofan .main1 .main1-2 ul .li6{
+   background: url(../images/images/bus_tu6.jpg) no-repeat;
+}
+#chaofan .main1 .main1-2 ul li span{
+   display: inline-block;
+    background: rgb(32, 155, 236);
+    font-size: 22px;
+    width: 228px;
+    height: 70px;
+    line-height: 70px;
+    color: #fff;
+}
+#chaofan .main1 .main1-2 ul li a{
+    display: block;
+   height:218px;
+   width: 351px;
+    background: rgb(32, 155, 236);
+    text-align:center;
+    position: absolute;
+    top: 0;
+    color: #fff;
+    display: none;
+     /* transition:height 0.3s;
+     overflow: hidden; */
+}
+#chaofan .main1 .main1-2 ul .li2 a,
+#chaofan .main1 .main1-2 ul .li2 span{
+    background: #1766DF;
+}
+#chaofan .main1 .main1-2 ul .li3 a,
+#chaofan .main1 .main1-2 ul .li3 span{
+    background: #F3C610;
+}
+#chaofan .main1 .main1-2 ul .li4 span,
+#chaofan .main1 .main1-2 ul .li4 a{
+    background: #D80577;
+}
+#chaofan .main1 .main1-2 ul .li5 span,
+#chaofan .main1 .main1-2 ul .li5 a{
+    background: #F62624;
+}
+#chaofan .main1 .main1-2 ul .li6 span,
+#chaofan .main1 .main1-2 ul .li6 a{
+    background: #97C632;
+    
+}
+
+#chaofan .main1 .main1-2 ul li:hover a{
+   display: block;
+   /* height: 100%; */
+  /* animation:mymove 0.1s 1; */
+}
+/* @keyframes mymove
+{   
+0%   {top:0px;  height:0;}
+100% {top:0px;  height:218px;}
+} */
+#chaofan .main1 .main1-2 ul li a p{
+    line-height: 24px;
+    white-space: pre-line;
+    margin-top: 50px;
+}
+#chaofan .main1 .main1-2 ul li a .p1{
+    line-height: 12px;
+   font-size: 14px;
+    margin-top: 40px;
+}
+
+
+/* main2 star */
+#chaofan .main2{
+    height: 763px;
+    width: 100%;
+    text-align: center;
+    background: #EBEFF1;
+}
+
+#chaofan .main2 .main-tit div{
+    background: url(../images/images/clien_h2.jpg) no-repeat;
+}
+#chaofan .main-cont ul{
+    height: 424px;
+    width: 100%;
+    margin-top: 57px;
+}
+#chaofan .main-cont ul li{
+    height: 166px;
+    width: 283px;
+    float: left;
+}
+#chaofan .main2 .main-cont ul li img{
+    height: 166px;
+    width: 283px;
+    border: 2px solid #EBEFF1;
+}   
+#chaofan .main2 .main-cont ul li .img2{
+   display: none;
+} 
+#chaofan .main2 .main-cont ul li:hover .img1{
+    display: none;
+} 
+#chaofan .main2 .main-cont ul li:hover .img2{
+    display: block;
+} 
+
+
+/* mian3 star */
+#chaofan .main3{
+    height: 682px;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+}
+#chaofan .main3 .main-tit div{
+    background: url(../images/images/work_h2.jpg) no-repeat;
+}
+#chaofan .main3 .main-cont ul{
+    height: 423px;
+    width: 100%;
+    margin-top: 57px;
+}
+#chaofan .main4 .main-cont ul li{
+    height: 211px;
+    width: 283px;
+    float: left;
+}
+#chaofan .main3 .main-cont ul li img{
+    height: 211px;
+    width: 283px;
+    border: 2px solid #fff;
+    /* background: url(../images/images/man3-3.jpg) no-repeat; */
+}
+
+
+
+/* main4 star */
+#chaofan .main4{
+    height: 801px;
+    width: 100%;
+    
+    background: #71B2CE;
+}
+#chaofan .main4 .main-tit{
+    text-align: center;
+}
+#chaofan .main4 .main-tit div{
+    background: url(../images/images/news_h2.jpg) no-repeat;
+}
+#chaofan .main4 .main-cont ul{
+    height: 528px;
+    width: 100%;
+    margin-top: 57px;
+    
+}
+#chaofan .main4 .main-cont ul li{
+    height: 166px;
+    width: 550px;
+    float: left;
+    /* background: #fff; */
+    margin-bottom: 15px;
+    padding-left: 190px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    margin-right: 40px;
+}
+#chaofan .main4 .main-cont ul .li1{
+background:#fff url(../images/images/man4-3.jpg) no-repeat 0 center;
+}
+#chaofan .main4 .main-cont ul li .a2{
+display: block;
+line-height: 28px;
+margin-top: 23px;
+color: #000;
+}
+#chaofan .main4 .main-cont ul li .a3{
+    display: block;
+    line-height: 21px;
+    font-size: 12px;
+    color: #7C7C7C;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+}
+#chaofan .main4 .main-cont ul li a:hover{
+    text-decoration: underline;
+}
+#chaofan .main4 .main-cont ul li p{
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 14px;
+    color: #7C7C7C;
+}
+#chaofan .main4 .main-cont ul li p span{   
+   float: right;
+}
+/* main5 star */
+#chaofan .main5{
+    height: 912px;
+    width: 100%;    
+    background: #fff;
+}
+#chaofan .main5 .main-tit{
+    text-align: center;
+}
+#chaofan .main5 .main-tit div{
+    background: url(../images/images/exp_h2.jpg) no-repeat;
+}
+#chaofan .main5 .main-cont ul{
+    height: 130px;
+    width: 100%;
+    margin-top: 57px;
+    border-bottom: 2px solid #717171;;
+}
+#chaofan .main5 .main-cont ul li{
+    height: 130px;
+    width: 285px;
+    text-align: center;
+} 
+#chaofan .main5 .main-cont ul li div{
+   margin: 0 auto;
+    height: 80px;
+    width: 80px;
+    background: url(../images/images/exp_xtb.png) no-repeat;
+} 
+#chaofan .main5 .main-cont ul li p{
+    margin-top: 19px;
+    color: #717171;
+} 
+#chaofan .main5 .main-cont ul li:hover{
+    border-bottom: 2px solid rgb(9, 115, 236);
+} 
+#chaofan .main5 .main-cont ul li .d1{
+    background: url(../images/images/exp_xtb.png) no-repeat;
+} 
+#chaofan .main5 .main-cont ul li:hover .d1{
+background: url(../images/images/exp_xtb.png) no-repeat -80px 0;
+} 
+#chaofan .main5 .main-cont ul li .d2{
+    background: url(../images/images/exp_xtb.png) no-repeat 0 -80px;
+} 
+#chaofan .main5 .main-cont ul li:hover .d2{
+background: url(../images/images/exp_xtb.png) no-repeat -80px -80px;
+} 
+#chaofan .main5 .main-cont ul li .d3{
+    background: url(../images/images/exp_xtb.png) no-repeat 0 -160px;
+} 
+#chaofan .main5 .main-cont ul li:hover .d3{
+background: url(../images/images/exp_xtb.png) no-repeat -80px -160px ;
+} 
+#chaofan .main5 .main-cont ul li .d4{
+    background: url(../images/images/exp_xtb.png) no-repeat 0 -240px;
+} 
+#chaofan .main5 .main-cont ul li:hover .d4{
+background: url(../images/images/exp_xtb.png) no-repeat -80px -240px ;
+} 
+#chaofan .main5 .main5-1{
+    width: 100%;
+    height:461px;
+    margin-top: 50px;
+    background: url(../images/images/expe_liu_tu.png) no-repeat;
+}
+
+/* main6 star */
+#chaofan .main6{
+    width: 100%;
+    height: 224px;
+    background: #0065C5;
+    overflow: hidden;
+    
+} 
+#chaofan .main6 ul{
+    width: 100%;
+    height: 132px;
+    margin-top: 46px;
+} 
+#chaofan .main6 ul li{
+    width: 378px;
+    height: 132px;
+    text-align: center;
+    color: #fff;
+    border-right: 1px solid #0052A7;
+    padding-top: 10px;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+}
+#chaofan .main6 ul li h2{
+    line-height: 67px;
+    font-size: 67px;
+ 
+}
+#chaofan .main6 ul li p{
+    margin-top: 33px;
+}
+#chaofan .main6 ul li span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    /* font-size: 3px;
+    line-height: 3px; */
+    background: #0065C5;
+    position: absolute;
+    top:42px;
+}
+
+/* footer star */
+#chaofan .footer{
+    width: 100%;
+    height: 663px;
+    background: url(../images/images/footer_bj.jpg);
+    text-align: center;
+    color: #fff;
+}
+#chaofan .footer .conten .main-tit div{
+    font-size: 44px;
+    line-height: 44px;
+}
+#chaofan .footer .conten .main-tit p{
+    font-size: 24px;
+    line-height: 24px;
+    color: #fff;
+}
+#chaofan .footer .conten .main-cont ul{
+    width: 100%;
+    height: 48px;
+    margin-top: 54px;
+}
+#chaofan .footer .conten .main-cont ul li{
+    width: 268px;
+    height: 48px;
+    /* background: url(../images/images/foot_tel.png) no-repeat; */
+    padding-left: 69px;
+    box-sizing: border-box;
+    text-align: left;
+    margin-right: 12px;
+}
+#chaofan .footer .conten .main-cont ul .li1{
+    background: url(../images/images/foot_tel.png) no-repeat;
+}
+#chaofan .footer .conten .main-cont ul li .p1{
+    color: #717171;
+    line-height: 16px;
+}
+#chaofan .footer .conten .main-cont ul li .p2{
+    /* color: #717171; */
+    line-height: 16px;
+    margin-top: 12px;
+}#chaofan .footer .conten .footer-1{
+    
+    height: 80px;
+}
+#chaofan .footer .conten .footer-1 ul li{
+    border: 1px solid #ccc;
+    height: 80px;
+}
+#chaofan .footer .conten .footer-1 ul .li5{
+    background: url(../images/images/foot_c1.png) no-repeat;
+}
+#chaofan .footer .conten .footer-1 ul .li5 p{
+   line-height: 80px;
+}
+#chaofan .footer .conten .footer-2{
+    height: 270px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    /* background: pink; */
+    color: #717171;
+}
+#chaofan .footer .conten .footer-2 .d1{
+    width: 820px;
+    height: 100%;
+    float: left;
+    margin-top: 60px;
+}
+#chaofan .footer .conten .footer-2 .d1 p{
+    font-size: 12px;
+    line-height: 30px;
+    white-space: pre-line;
+    text-align: left;
+}
+#chaofan .footer .conten .footer-2 .d2 {
+ float: left;
+ color: #fff;
+ margin-top: 50px;
+}
+#chaofan .footer .conten .footer-2 .d2 img{
+ width: 140px;
+ height:140px;
+}
+
+#chaofan .kefu{
+    width: 48px;
+    height: 188px;
+    /* background: red; */
+    position: fixed;
+    right: 20px;
+    bottom: 16px;
+   
+}
+#chaofan .kefu li{
+    width: 48px;
+    height: 47px;
+    /* border: 1px solid #ccc; */
+    /* background: url(../images/images/01.png) no-repeat; */
+    position: relative;
+}
+#chaofan .kefu li a{
+    display: block;
+    width: 48px;
+    height: 47px;
+    border: 1px solid #ccc;
+    /* background: url(../images/images/01.png) no-repeat; */
+}
+#chaofan .kefu .li2 span{
+    display: block;
+    width: 154px;
+    height: 46px;
+  position: absolute;
+  left: -154px;
+  top: 1px;
+  background: url(../images/images/01.png) no-repeat -96px 0; 
+  display: none;
+}
+#chaofan .kefu .li3 img{
+    width: 100px;
+  position: absolute;
+  left: -100px;
+  top: 1px;
+  background: url(../images/images/01.png) no-repeat -96px 0; 
+  display: none;
+}
+#chaofan .kefu .li1 a{
+    background: url(../images/images/01.png) no-repeat 0 0;
+}
+#chaofan .kefu .li1 a:hover{
+    background: url(../images/images/01.png) no-repeat -48px 0;
+}
+#chaofan .kefu .li2 a{
+    background: url(../images/images/01.png) no-repeat 0 -47px;
+}
+#chaofan .kefu .li2 a:hover{
+    background: url(../images/images/01.png) no-repeat -48px -47px;
+}
+#chaofan .kefu .li2 a:hover span{
+display: block;
+}
+#chaofan .kefu .li3 a{
+    display: block;
+    background: url(../images/images/01.png) no-repeat 0 -94px;
+}
+#chaofan .kefu .li3 a:hover{
+    background: url(../images/images/01.png) no-repeat -48px -94px;
+}
+#chaofan .kefu .li3 a:hover img{
+    display: block;
+}
+#chaofan .kefu .li4 a{
+    background: url(../images/images/01.png) no-repeat 0 -141px;
+}
+#chaofan .kefu .li4 a:hover{
+    background: url(../images/images/01.png) no-repeat -48px -141px;
+}

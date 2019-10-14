@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrap" id="wrap">
+        <div class="biger">
+            <img src="" alt="">
+        </div>
+        <div class="imgs">
+            <div class="main">
+                <img src="" alt="">
+                <div class="mask" id="mask"></div>
+            </div>
+            <div class="bottom">
+                <p class="prev">&lt;</p>
+                <div class="box">
+                    <ul class="smaller clear">
+                        <!-- <li><img src="../images/0.jpg" alt=""></li> -->
+                    </ul>
+                </div>
+                <p class="next">&gt;</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="./js/loupe.js"></script>
+<script>
+    (function () {
+        loupe({
+            ele: 'wrap',
+            img: ['./images/0.jpg', './images/1.jpg', './images/3.jpg', './images/4.jpg', './images/5.jpg',
+                './images/6.jpg', './images/7.jpg', './images/8.jpg'
+            ],
+            // ih: 110,
+            // iw: 110,
+            times: 3
+        });
+    })();
+</script>
+
+</html>

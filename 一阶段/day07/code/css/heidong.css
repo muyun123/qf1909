@@ -1,0 +1,158 @@
+#heidong{
+    width: 100%;
+    height: 6613px;
+
+}
+#heidong .conter{
+    width:1200px ;
+    height: 100%;
+    margin: 0 auto;
+    /* background: pink; */
+}
+/* header star */
+
+#heidong .header{
+    height: 60px;
+    width: 100%;
+  background: #25282C;
+  position: relative;
+
+}
+#heidong .header img{
+    height: 42px;  
+      margin-top: 9px;
+      float: left;
+}
+#heidong .header .banben{
+    display: inline-block;
+    position: absolute;
+      top: 50%;
+      transform: translate(0,-50%);
+    height: 24px; 
+    margin-left: 15px;
+}
+#heidong .header .banben a{
+    display:inline-block;
+     font-size: 11px;
+     line-height: 24px;
+      height: 24px;  
+      border: 1px solid rgb(11, 95, 250);
+      color: rgb(11, 95, 250);
+      float: left;
+      padding: 0 6px;
+
+}
+#heidong .header .banben .a2{
+    display:none;
+    background: rgb(11, 95, 250);
+    color: #fff;
+}
+#heidong .header .banben:hover .a2{
+    display: block;
+}
+#heidong .header .banben:hover .a1{
+    display: none;
+}
+#heidong .header ul{
+    display: inline-block;
+    height: 100%;
+    margin-left: 108px; 
+    
+}
+#heidong .header ul li{
+    /* height: 100%; */
+    float: left;   
+   position: relative;
+}
+
+#heidong .header ul li a{
+    display: block;
+    line-height: 60px;
+    padding: 0 11px;
+    color: #fff;
+    font-size: 12px;
+    
+}
+
+#heidong .header .du2 li a:hover{
+ background: #000;
+ color: rgb(11, 95, 250);
+}
+#heidong .header .du1{
+ float: right;
+}
+#heidong .header .du1 a{
+ font-size: 14px;
+ padding:0 10px;
+}
+#heidong .header .du1 .a1{
+    line-height: 34px;
+ padding: 0 15px;
+ background: rgb(33, 85, 226);
+ margin-top: 14px;
+ margin-right: 10px;
+}
+#heidong .header .du3{
+    width: 100px;
+    float: none;
+    position: absolute;
+    top: 60px;
+    left: -108px;
+    /* height: 40px; */
+    display: none;
+}
+#heidong .header .du3 li{
+    float: none;
+}
+#heidong .header .du3 li a{
+   color: #ccc;
+   background: #000;
+   line-height: 40px;
+   
+}
+#heidong .header .du3 li a:hover{
+   color: #fff;
+}
+#heidong .header .du2 li:hover .du3{
+    display: block;
+ background: #000;
+ color: rgb(11, 95, 250);
+}
+
+/* banner star */
+#heidong .banner{
+    width: 100%;
+    height: 680px;
+    background: url(../images/images/bannerbg.jpg) no-repeat center center;
+    overflow: hidden;
+}
+#heidong .banner h2{
+    margin-top: 167px;
+    margin-left: 78px;
+    width: 333px;
+    height: 82px;
+    background: url(../images/images/word.svg);
+}
+#heidong .banner h3{
+    margin-left: 78px;
+    margin-top: 23px;
+line-height: 22px;
+font-size: 22px;
+color: #fff;
+}
+#heidong .banner form{
+ height: 46px; 
+ font-size: 0;
+}
+#heidong .banner form input:first-child{
+  margin-left: 78px;
+ width: 350px;
+ height: 46px;   
+ border: 0;
+}
+#heidong .banner form input[type=submit]{
+ width: 46px;
+ height: 46px;   
+ border: 0;
+ background: #fff;
+}

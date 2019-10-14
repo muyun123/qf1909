@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>成绩排序</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #datalist {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        table {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table thead {
+            text-align: left;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>成绩表</h1>
+    <div id="datalist">
+        <table id="list">
+            <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>语文</th>
+                    <th>数学</th>
+                    <th>英语</th>
+                    <th>总成绩</th>
+                    <th>排名</th>
+                </tr>
+            </thead>
+            <tbody id="tb">
+                <!-- <tr>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+					</tr> -->
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    /*
+            需求：以下是某班级一次考试的成绩表。请计算每个学生总成绩，并按总成绩排名。统计各单科成绩第一名，输出其成绩与学号。
+                * 求出每个人的总成绩
+                * 求单科成绩和对应的学号
+                * 按照总成绩进行排序,求出排名信息
+                * 数据渲染：生成表格
+        */
+    //未排序的数据
+    var score = [{
+        sno: 1,
+        chinese: 105,
+        math: 62,
+        english: 118
+    }, {
+        sno: 2,
+        chinese: 89,
+        math: 78,
+        english: 120
+    }, {
+        sno: 3,
+        chinese: 86,
+        math: 64,
+        english: 80
+    }, {
+        sno: 4,
+        chinese: 78,
+        math: 99,
+        english: 91
+    }, {
+        sno: 5,
+        chinese: 107.5,
+        math: 97,
+        english: 70
+    }, {
+        sno: 6,
+        chinese: 112,
+        math: 61,
+        english: 92
+    }, {
+        sno: 7,
+        chinese: 101,
+        math: 79,
+        english: 104
+    }, {
+        sno: 8,
+        chinese: 71,
+        math: 72,
+        english: 105
+    }, {
+        sno: 9,
+        chinese: 56,
+        math: 68,
+        english: 61
+    }, {
+        sno: 10,
+        chinese: 98,
+        math: 83,
+        english: 77
+        //					total : 用代码计算总成绩
+    }];
+
+    for (var key in score) {
+        score[key].total = score[key].chinese + score[key].math + score[key].english;
+    }
+
+    score.sort(function (a, b) { //a和b是对象
+        //根据语文成绩排序
+        return b.total - a.total; //升序
+    });
+    var html = score.map(function (item, index) {
+        return `<tr>
+                    <td>${item.sno}</td>
+                    <td>${item.chinese}</td>
+                    <td>${item.math}</td>
+                    <td>${item.english}</td>
+                    <td>${item.total}</td>
+                    <td>${index+1}</td>
+                </tr>`;
+    }).join('');
+    var tb = document.getElementById('tb');
+    tb.innerHTML = html;
+    console.log(score);
+
+</script>
+
+</html>

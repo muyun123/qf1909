@@ -1,0 +1,76 @@
+.box{
+    width: 728px;
+    margin: auto;
+}
+.box a{
+    width: 728px;
+    height: 52px;
+    line-height: 52px;
+    display: block;
+    border-radius: 5px;
+    background: #ccc;
+    position: relative;
+}
+.box .uuu a::after{
+    content: "";
+    display:block;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-top-color: #fff;
+    position: absolute;
+    top: 22px;
+    right: 10px;
+}
+.box .uuu li{
+    margin-top: 10px;
+}
+.box .uuu li .uuuu li{
+    height: 160px;
+    /* display: none; */
+    overflow: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.box .uuu li .uuuu{
+    height: 0px;
+    overflow: hidden;
+    transition: height 2s;
+}
+.box .uuu li:target a{
+    background: rgb(8, 153, 211);
+}
+.box .uuu li:target .uuuu{
+    height: 160px;
+}
+.box .uuu li:target a::after{
+    content: "";
+    display:block;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-left-color: #fff;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 300px;
+            position: fixed;
+            right: -100px;
+            top: 50%;
+            transform: translate(0, -50%);
+            background: pink;
+        }
+
+        #box2 {
+            width: 30px;
+            height: 60px;
+            position: absolute;
+            top: 50%;
+            transform: translate(-99%, -50%);
+            background: #58bc58;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <div id="box2"></div>
+    </div>
+</body>
+<script src="../js/common.js"></script>
+<script>
+    (function () {
+        var box1 = document.getElementById('box1');
+        var box2 = document.getElementById('box2');
+        asideadv({
+            ele: box1, //事件元素
+            attr: 'right', //属性
+            attrval1: 0, //移入属性值1
+            attrval2: -100 //移出属性值2
+        });
+
+        function asideadv(opt) {
+            opt.ele.onmouseover = function () {
+                startMove(this, {
+                    [opt.attr]: opt.attrval1
+                });
+            }
+
+            opt.ele.onmouseout = function () {
+                startMove(this, {
+                    [opt.attr]: opt.attrval2
+                });
+            }
+        }
+
+        function move(a) {
+            clearInterval(box1.timer);
+            box1.timer = setInterval(function () {
+                var cur = 0;
+                cur = parseInt(css(box1, 'right'));
+                var speed = (a - cur) / 2;
+                speed = Math.floor(speed);
+                console.log(cur);
+                if (cur == a) {
+                    clearInterval(box1.timer);
+                }
+                box1.style.right = cur + speed + 'px';
+            }, 30);
+        }
+    })();
+</script>
+
+</html>

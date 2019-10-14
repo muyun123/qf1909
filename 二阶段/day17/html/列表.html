@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生成任意表格</title>
+    <style>
+        #output {
+            margin-top: 20px;
+        }
+
+        table {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #ddd;
+            padding: 3px 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>生成任意表格</h1>
+    <label for="row">姓名：</label><input type="text" id="name" autocomplete="off">
+    <label for="col">年龄：</label><input type="text" id="age">
+    <input type="button" value="插入到表格" id="btn">
+    <div id="output">
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>1</td>
+                    <td contenteditable="true">张三</td>
+                    <td contenteditable="true">10</td>
+                    <td>
+                        <a href="###">删除</a>
+                        <a href="###">复制</a>
+                    </td>
+                </tr> -->
+            </tbody>
+
+        </table>
+    </div>
+</body>
+<script>
+    (function () {
+        var name = document.getElementById('name');
+        var age = document.getElementById('age');
+        var btn = document.getElementById('btn');
+        var output = document.getElementById('output');
+        var tbody = output.querySelector('tbody');
+
+        btn.onclick = function () {
+            var num = name.value.trim() - 0;
+            var num2 = age.value.trim() - 0;
+
+            if (num && num2) {
+
+                var html = `<tr><td>${1}</td>
+                <td contenteditable="true">1</td>
+                <td contenteditable="true">${num2}</td>
+                <td>
+                    <a href="###" class="del">删除</a>
+                    <a href="###" class="coby">复制</a>
+                </td></tr>`;
+                tbody.innerHTML += html;
+            } else {
+                alert('不能为空');
+            }
+            beise();
+        }
+
+        function beise() {
+            var trr = tbody.children;
+            for (var i = 0; i < trr.length; i++) {
+                if (i % 2 == 0) {
+                    trr[i].style.background = 'red';
+                } else {
+                    trr[i].style.background = 'pink';
+                }
+                trr[i].firstChild.innerHTML = i + 1;
+            }
+        }
+        tbody.onclick = function (ev) {
+            if (ev.target.className == 'del') {
+                var now = ev.target.parentNode.parentNode;
+                tbody.removeChild(now);
+            } else if (ev.target.className == 'coby') {
+                var now = ev.target.parentNode.parentNode;
+                var trr1 = now.cloneNode(true);
+                tbody.appendChild(trr1);
+            }
+            beise();
+        }
+    })();
+</script>
+
+</html>

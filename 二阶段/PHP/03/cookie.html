@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01cookie</title>
+</head>
+
+<body>
+    <input type="text" id="tex">
+    <input type="button" value="存cookie" id="btn1">
+    <input type="button" value="取cookie" id="btn2">
+    <input type="button" value="删cookie" id="btn3">
+    <div id="box"></div>
+</body>
+<script src="../common.js"></script>
+<script>
+    /*
+        cookie:前后端都可以读写cookie
+            * 必须是环境方式才能使用：有通信
+            * 存储在浏览器里面的数据
+                * 每个域名只能存储50个(不同的浏览器略有不同)https://www.cnblogs.com/phpfeng/p/9261704.html
+                * 会话级别的数据存储：关掉浏览器就没有了(默认效果会话级别)
+                * 纯文本(字符串格式)存在硬盘中
+
+        操作：
+            * 增
+            * 删
+            * 改
+            * 查
+
+        语法：document.cookie = name=value[;expires=date][;path=路径][;domain=域名]
+            * domain=http://www.baidu.com 允许百度访问该页面的cookie
+    */
+
+    // document.cookie = 'name=xiaoyouyu';
+    (function () {
+
+        let tex = document.getElementById('tex');
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        let btn3 = document.getElementById('btn3');
+        let box = document.getElementById('box');
+        // setcookie('like', '水煮鱼', 5);
+        //存数据到cookie里面
+        btn1.onclick = () => {
+            // let val = tex.value.trim();
+            // let now = new Date();
+            // now.setDate(now.getDate() + 7);
+            // document.cookie = 'username=' + val + ';expires=' + now;
+            document.cookie = 'user=name;path=/03';
+        }
+
+
+
+        btn2.onclick = () => {
+            let str = document.cookie; //username=admin; age=18
+            console.log(str);
+        }
+
+        btn3.onclick = () => {
+            let now = new Date();
+            now.setDate(now.getDate() - 1);
+            document.cookie = 'user=;expires=' + now + ';path=/03';
+        }
+
+    })();
+</script>
+
+</html>
