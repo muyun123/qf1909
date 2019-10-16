@@ -5,5 +5,5 @@
              str1 += str[i];
          }
      }
-     return str1;
+     //  return str1;
  }
