@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="n1">
+    <input type="text" id="n2">
+    <input type="button" id="btn" value="">
+    <script>
+        var xhr = new XMLHttpRequest();
+        var n1 = document.querySelector('#n1');
+        var n2 = document.querySelector('#n2');
+        var btn = document.querySelector('#btn');
+        btn.onclick = () => {
+            var da = 'password=' + n2.value + '&' + 'username=' + n1.value;
+            xhr.open('post', 'http://localhost:8001', true);
+            xhr.setRequestHeader('content-type', "application/x-www-form-urlencoded");
+            xhr.send(da);
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    let str = xhr.responseText;
+                    console.log(str);
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
